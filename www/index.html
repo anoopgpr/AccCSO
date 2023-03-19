@@ -1,0 +1,3509 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ACC Limited</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1, user-scalable=no,height=device-height">
+	<link rel="stylesheet" href="assets/css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/enroll.css">
+	<link rel="stylesheet" href="assets/css/mloyal.css">
+	<link rel="stylesheet" href="assets/css/app.css">
+	<link rel="stylesheet" href="assets/css/vertical.min.css">
+	<link rel="stylesheet" href="assets/css/botui.min.css" />
+	<link rel="stylesheet" href="assets/css/botui-theme-custom.css" />	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />	
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" media="all" />
+	<link rel="stylesheet" href="assets/css/owl.theme.default.css" media="all" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Source+Sans+3:wght@700&display=swap" rel="stylesheet"> 
+	 
+	<script src="assets/js/jquery-1.11.1.min.js"></script> 
+	<script src="assets/js/jquery.mobile-1.4.5.min.js"></script> 	
+	<script src="https://cdn.jsdelivr.net/vue/latest/vue.min.js"></script>
+	<script src="assets/js/botui.js"></script>
+	<script src="assets/js/delivery-bot.js"></script>	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./src/css/base.css">
+	<link rel="stylesheet" href="./src/css/swichTab.css">
+    <script src="assets/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
+
+	<script type="text/javascript">
+				$(document).ready(function(){
+					$("#sidebar").enhanceWithin().panel();
+					$("#sidebar").hide();
+				})
+
+			var deviceType;
+
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			function onDeviceReady() 
+			{
+
+				   deviceType = (navigator.userAgent.match(/iPad/i)) == "iPad" ? "iPad" : (navigator.userAgent.match(/iPhone/i)) == "iPhone" ? "iPhone" : (navigator.userAgent.match(/Android/i)) == "Android" ? "Android" : (navigator.userAgent.match(/BlackBerry/i)) == "BlackBerry" ? "BlackBerry" : "null";
+					 if(deviceType=='null')
+						deviceType='Android';
+
+
+						$("#sidebar").show();
+						$("#sidebar").enhanceWithin().panel();
+						$("#optionspop_profile_doc_kyc").enhanceWithin().popup();
+
+						//$("#sidebar2").show();
+
+						receivedEvent('deviceready');
+			}
+
+		</script>
+
+</head>
+<body>
+
+    <div data-role="page" data-dom-cache="false" id="gifslider" class="bg-white full_height">
+		
+		<div> <img src="assets/media/mloyalsplash.gif" style="max-width:400px; width:100%;display:block;margin:0 auto;"> </div>
+
+	</div>
+
+	<!--Login Page-->
+	<div data-role="page" data-dom-cache="true" id="page-login-dealer_se" class="login_bg full_height" style="padding-bottom: 67px; min-height: 529px;">
+		<div data-role="content" class="ui-content pt-0 d-flex align-items-start login_content" role="main">
+		  <div class="loginreg mt-20">
+			<div class="loginreg_inner">
+			  <div class="login_logo mt-20" style="margin: 0 auto;">
+				 <img src="assets/images/logo2.png" class="img-responsive" alt="">
+				 </div>
+				<!-- <div id="google_translate_element" style="text-align: center;margin: 10px;"></div> -->
+				 
+			  <h1 class="login_heading mt-20 " style="text-align: center;"><span id="spin_1">Welcome</span> </h1>
+			
+			  <div class="form-group mt-20" style="text-align: center;">
+				<!-- <label class="form_label">Username</label> -->
+				<div class="custom-input" > 
+				  <input type="tel" id="dealerusername_se" name="dealerusername_se" placeholder="Username" class="form-input" data-role="none" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+				</div>
+				<div class="clear"></div>
+			  </div>
+
+			  <div class="form-group" style="text-align: center;">
+				<!-- <label class="form_label">Password</label> -->
+				<div class="custom-input" >
+				  <input type="password" id="dealerpassword_se" name="dealerpassword_se" placeholder="Password" class="form-input" data-role="none" />
+				</div>
+				<div class="clear"></div>
+			  </div>
+			  
+			  <!--<div class="align-items-center justify-content-between mt-10"  style="text-align: center;">
+				<label class="d-inline-flex align-items-center justify-content-start mb-0">
+				<div class="custom_check_login">
+				  <input type="checkbox" id="tnc-chck1" name="tnc-chck1" data-role="none">
+				  <span></span> </div>
+				<p>I have read the <span class="login_opt">Terms &amp; Conditions </span></p>
+				</label>
+			  </div>-->
+			  <div class="form-group "> <a href="javascript:dealerauthenticate_se();" class="btn btn_primary submit_btn ui-link">SUBMIT</a>
+				<div class="clear"></div>
+				
+			  </div>
+			   
+			</div>
+			 
+		  </div>
+		</div>
+		<img src="assets/images/app_images/login_banner.png" class="img-responsive" alt="" style="position: fixed;
+		bottom: 0px;">
+		</div>
+		 
+		
+<!--OTP page-->
+<div data-role="page" data-dom-cache="true" id="login_pg_new" class="login_bg full_height">
+	<div data-role="content" class="ui-content pt-0  d-flex align-items-start login_content">
+	  <div class="loginreg mt-20">
+		<div class="loginreg_inner">
+		  <!-- <div class="login_logo" style="    margin: 0 auto;"> 
+			<img src="assets/images/logo2.png" class="img-responsive" alt="">
+		 </div> -->
+		  <h2 class="otp_heading22 mt-50" style="text-align: center;">Please enter OTP sent to your
+			registered mobile number</h2>
+		  <div class="form-group mt-20 mt-40">
+			<input type="hidden" id="username_new" />
+			<div class="ui-grid_custom">
+			  <input type="password" data-role="none" placeholder="Code" id="password_myacc" style="display:none;border-bottom: 0" />
+			  <div class="ui-block-a padding0_10px">
+				<input id="codeBox1" type="number" maxlength="1" class="otp_input" onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)" data-role="none" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+			  </div>
+			  <div class="ui-block-b padding0_10px">
+				<input id="codeBox2" type="number" maxlength="1" class="otp_input" onkeyup="onKeyUpEvent(2, event)" onfocus="onFocusEvent(2)" data-role="none" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+			  </div>
+			  <div class="ui-block-c padding0_10px">
+				<input id="codeBox3" type="number" maxlength="1" class="otp_input" onkeyup="onKeyUpEvent(3, event)" onfocus="onFocusEvent(3)" data-role="none" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+			  </div>
+			  <div class="ui-block-d padding0_10px">
+				<input id="codeBox4" type="number" maxlength="1" class="otp_input" onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)" data-role="none" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+			  </div>
+			</div>
+			<!--<label class="input_label" style="margin-top: 20px">Enter 4 Digit Code</label>-->
+			<div class="clear"></div>
+		  </div>
+		  <div class="form-group mt-20"> <a href="javascript:authenticate_new();"  class="btn btn_primary submit_btn">Submit</a>
+			<div class="clear"></div>
+		  </div>
+		 
+		</div>
+		 <div class="text-center mt-20"> <a href="#page-forgot-password" class="login_opt">Resend OTP</a></div>  
+	  </div>
+	</div>
+	 
+	<div data-role="footer" data-position="fixed" class="footer_login border_none bg_white" data-tap-toggle="false" data-hide-during-focus="false">
+	  <div class="d-flex align-items-center justify-content-center">  <img src="assets/images/app_images/login_banner.png" class="img-responsive" alt=""> </div>
+	</div>
+  </div>
+  
+  <!--OTP page--> 
+
+<!--Language page-->
+<div data-role="page" data-dom-cache="true" id="Language" class="login_bg full_height">
+	<div data-role="content" class="ui-content pt-0  d-flex align-items-start login_content">
+	  <div class="loginreg mt-20">
+		<div class="loginreg_inner">
+		  <!-- <div class="login_logo"> <img src="assets/images/logo2.png" class="img-responsive" alt=""> </div> -->
+		  <h2 class="otp_heading22 mt-40 mb-10">Your Preferred  <b>Language</b></h2>
+		   
+		  
+
+
+
+<div>
+	<div class="thumb_group flex-wrap">
+		 
+		</div>
+</div>
+
+
+		  <div class="form-group mt-20"> <a href=""   class="btn btn_primary submit_btn" id="toggleFilter2">Continue</a>
+			<div class="clear"></div>
+		  </div>
+		 
+		</div>
+		<div class="filter_panel1" id="filter_panel2" style="display: none">
+			<div class="ui-grid-a">
+				<div class="ui-block-a mb-20">
+					<h3>How would you like to claim your points</h3>
+				</div>
+				<div class="ui-block-b text-right"> <a href="#" class="filter_close1" id="filterClose2">+</a> </div>
+			</div>
+			<div name="filter_transaction2_div" id="filter_transaction2_div">						
+				<div name="estmt" id="estmt">
+					<div class="padding0_10px">
+						<label class="mb-0 custom_check">
+						<input type="radio" name="input_email_statement" id="radio-1-month" data-role="none" value="last1month" data-cacheval="false" checked/> <span class="custom_radio"></span> Self Uploading 
+						
+						 
+						</label>
+					</div>
+					<div class="padding0_10px">
+						<label class="mb-0 custom_check">
+						<input type="radio" name="input_email_statement" id="radio-1-month" data-role="none" value="last1month" data-cacheval="false" checked/> <span class="custom_radio"></span>Acc Dealer / AR
+						</label>
+					</div>
+				  
+					<div style="display: flex;" class="mb-40">
+					  <a href="javascript:sendemailstatement();" class="btn btn_primary mt-10"  style="width:49%">Proceed</a>
+					  <a href="javascript:sendemailstatement();" class="btn btn_primary mt-10" style="width:49%">Cancel</a>
+					</div>
+				   
+				</div>
+			</div>						
+		</div>
+		<div class="overlay"></div>
+	</div>
+	 
+  </div>
+  
+  <!--Language page--> 
+
+</div>
+
+<!--profile Page-->
+
+<div data-role="page" data-dom-cache="true" id="profilepage" class="login_bg full_height">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> 
+			<a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> 
+				<img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">Profile</h3>
+		  </div>
+		</div>
+	  </div>
+	  <div class="sidemenu_header">
+		<a href="#my_profile" class="profile_header_inner ui-link">
+		  <div class="">
+			
+			<div class="profile_pic profile_pic_sidemenu">
+			   <img src="assets/images/user_pic.png" id="update_photo" onclick="javascript:capturePhoto_profile();" class="img-responsive" alt="" onerror="this.src='assets/images/user_pic.png';">
+			  </div>
+		  </div>
+		</a>
+	  </div>
+  <div class="loginreg">
+	<div class="loginreg_inner mb-10">
+		<div class="form-group">
+			<label class="form_label">First Name:</label>
+			<div class="custom-input">
+			  <input type="text" id="update_firstname" placeholder="First Name" class="form-input" data-role="none" />
+			</div>
+			<div class="clear"></div>
+		  </div>
+		  <div class="form-group">
+			<label class="form_label">Last Name:</label>
+			<div class="custom-input">
+			  <input type="text" id="update_lastname" placeholder="Last Name" class="form-input" data-role="none" />
+			</div>
+			<div class="clear"></div>
+		  </div>
+	  <div class="form-group">
+		<label class="form_label">DOB</label>
+		<div class="custom-input">
+		  <input type="date" id="update_dob" placeholder="Name" class="form-input" data-role="none" />
+		</div>
+		<div class="clear"></div>
+	  </div>
+	  <div class="form-group">
+		<label class="form_label">Email:</label>
+		<div class="custom-input">
+		  <input type="text" id="update_email"  placeholder="Email" class="form-input" data-role="none" />
+		</div>
+		<div class="clear"></div>
+	  </div>
+	 
+	  <div class="form-group">
+		<label class="form_label">Address:</label>
+		<div class="custom-input">
+		  <input type="text" id="update_address"  placeholder="Address" class="form-input" data-role="none" />
+		</div>
+		<div class="clear"></div>
+	  </div>
+	  <div class="form-group">
+		<label class="form_label">Manpower:</label>
+		<div class="custom-input">
+		  <input type="text"  id="update_manpower" placeholder="Manpower " class="form-input" data-role="none" />
+		</div>
+		<div class="clear"></div>
+	  </div>
+	  <div class="form-group">
+		<label class="form_label">Infrastructure:</label>
+		<div class="custom-input">
+		  <input type="text" id="update_infrastructure" placeholder="Infrastructure" class="form-input" data-role="none" />
+		</div>
+		<div class="clear"></div>
+	  </div>
+	  <div class="form-group">
+		<label class="form_label">Expertise:</label>
+		<div class="custom-input">
+		  <input type="text" id="update_expertise" placeholder="Expertise" class="form-input" data-role="none" />
+		</div>
+		<div class="clear"></div>
+	  </div>
+	  <div class="form-group">
+		<label class="form_label">Bank Account Number:</label>
+		<div class="custom-input">
+		  <input type="text" id="update_bankacounto" placeholder="Bank Account Number:" class="form-input" data-role="none" />
+		</div>
+		<div class="clear"></div>
+	  </div>
+	  <div class="form-group">
+		<label class="form_label">GST No:</label>
+		<div class="custom-input">
+		  <input type="text" id="update_gstnno" placeholder="GSTN Number" class="form-input" data-role="none" maxlength="15" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onblur="javascript:checkgst();" />
+		</div>
+		<div class="clear"></div>
+	  </div>
+	  <div class="form-group">
+		<label class="form_label">Qualification:</label>
+		<div class="custom-input">
+		  <input type="text" id="update_qualification" placeholder="Qualification" class="form-input" data-role="none" />
+		</div>
+		<div class="clear"></div>
+	  </div>
+	  <div style="display: flex;">
+	 
+	  <div class="custom-input">
+		<label class="form_label">Ongoing Sites:</label>
+		<input type="text" id="update_ongoingsites" placeholder="Ongoing Sites" class="form-input" data-role="none" />
+		
+	  </div>
+	  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+	  <div class="custom-input">
+		<label class="form_label">Completed Sites:</label>
+		<input type="text" id="update_completedsites" placeholder="Completed Sites" class="form-input" data-role="none" />
+		
+	  </div><div class="clear"></div>
+	</div>
+	  <div class="clear"></div>
+	</div>
+	  <div class="form-group mt-10 "> <a href="javascript:updateProfile();" class="btn btn_primary submit_btn">Submit</a>
+		<div class="clear"></div>
+		<div class="emty-space"></div>
+
+	  </div>
+	</div>
+   
+ 
+	<!--<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home</li></a>
+					<a href="#reward_pg"> <li><div class="fthumb-icon"><img src="assets/images/app_images/my-rewards.png"></div>My Rewards</li></a>
+					<a href="#addtransactions"> <li><div class=" fthumb-icon qr "><img src="assets/images/app_images/scan.png"></div>Add More Grow More</li></a>
+					 <a href="#profilepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/profile.png"></div>Profile</li></a>
+					 <a href="#requestStatement"><li><div class="fthumb-icon"><img src="assets/images/app_images/alert.png"></div>Service Request</li> </a>
+				</ul>
+			</div>
+		</div> 
+	</footer>-->
+</div>
+  
+
+
+
+
+<!--profile End Page-->
+ 
+
+
+
+
+<!-- Non Reward Home Page-->
+
+
+<div data-role="page" data-dom-cache="true" id="non-reward-home" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false" data-hide-during-focus="false">
+		<div class="d-flex align-items-center justify-content-between main_header bg_img  ">
+		  <div class="d-flex align-items-center justify-content-start">
+			<a href="#" class="user_profile"> <div class="user_pic"> <span id="sortname2">G</span> </div> </a>  
+			<a href="#sidebar" class="sidemenu_btn" data-role="none"> <img src="assets/images/menu_icon.png" class="img-responsive" alt=""> </a>
+		 </div>
+		 <div class="d-flex align-items-center justify-content-start">
+			<a href="#" class="user_profile-logo"> <img src="./assets/images/app_images/logo4.png" class="img-responsive"> </a>  
+			 
+		 </div>
+		
+		 <div class="d-flex align-items-center justify-content-start">
+		  <a href="#" class="user_profile"> <img src="./assets/images/language.png" width="30px" style="margin-right: 10px;"> </a>  
+			<a href="#" class="user_profile"> <img src="./assets/images/app_images/magnifine.png" width="27px" style="margin-right: 10px;"> </a>  
+			<a href="#" class="user_profile" data-role="none"> <img src="assets/images/app_images/bell.png" class="img-responsive" alt="" width="20px;"> </a>
+		 </div>
+		
+		</div>
+	  </div><div class="">
+			   
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators carousel-indicatorsab">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		  
+		  </ol>
+	  
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner ">	
+			<div class="item active">
+			  <img src="./assets/images/app_images/banner.jpg" alt="" style="width:100%; height: 250px;">
+			</div>
+	  
+			<div class="item">
+			  <img src="./assets/images/app_images/banner.jpg" alt="Chicago" style="width:100%; height: 250px;">
+			</div>
+		  
+			<div class="item">
+			  <img src="./assets/images/app_images/banner.jpg" alt="New york" style="width:100%; height: 250px;">
+			</div>
+			
+		  </div>
+	  
+		  <!-- Left and right controls -->
+		   
+		</div>
+	  </div>
+
+	  
+	<!--Footer-->
+	
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home</li></a>
+					<a href="#reward_pg"> <li><div class="fthumb-icon"><img src="assets/images/app_images/my-rewards.png"></div>My Rewards</li></a>
+					<a href="#dream-gift"> <li><div class=" fthumb-icon qr "><img src="assets/images/app_images/scan.png"></div>Add More Grow More</li></a>
+					 <a href="#profilepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/profile.png"></div>Profile</li></a>
+					 <a href="#requestStatement"><li><div class="fthumb-icon"><img src="assets/images/app_images/alert.png"></div>Service Request</li> </a>
+				</ul>
+			</div>
+		</div> 
+	</footer>
+  </div>
+
+  <!--Page end-->
+
+
+
+<!-- add form -->
+  <div data-role="page" data-dom-cache="true" id="addtransactions" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">Add More</h3>
+		  </div>
+		  <!--<div class="header_right">
+			<div class="header_right_icons">
+			   <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+				</div>
+		  </div>-->
+		</div>
+	  </div>
+	  
+	<div data-role="content" class="ui-content p-20 align-items-start inner_content1 br_t_20 bg_white">
+			
+			<div class="form-group">
+				<label class="form_label">Bill Date</label>
+				<div class="custom-input">
+				  <input type="date" id="tx_date" class="form-input" data-role="none" />
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<!--<div class="form-group">
+					<label class="form_label">Mobile No.</label>
+					<div class="custom-input">
+					  <input type="tel" id="tx_mobile" name="tx_mobile" placeholder="Mobile No." class="form-input" data-role="none" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+					</div>
+					<div class="clear"></div>
+				</div>-->
+
+				<div class="form-group">
+					<label class="form_label">Brand</label>
+					<div class="custom-input">
+					  <input type="text" id="tx_brand" name="tx_brand" placeholder="Brand" class="form-input" data-role="none" />
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="form-group">
+					<label class="form_label">Product</label>
+					<div class="custom-input">
+					  <input type="text" id="tx_product" name="tx_product" placeholder="Product" class="form-input" data-role="none" />
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="form-group">
+					<label class="form_label">Quantity</label>
+					<div class="custom-input">
+					  <input type="number" id="tx_quantity" name="tx_quantity" placeholder="Quantity" class="form-input" data-role="none" />
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="form-group">
+					<label class="form_label">Area</label>
+					<div class="custom-input">
+					  <input type="text" id="tx_area" name="tx_area" placeholder="Area" class="form-input" data-role="none" />
+					</div>
+					<div class="clear"></div>
+				</div>
+
+			<div class="form-group">
+					<label class="form_label">Pincode</label>
+					<div class="custom-input">
+					  <input type="number" id="tx_pincode" name="tx_pincode" placeholder="Pincode" class="form-input" data-role="none" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onblur="javascript:checkpin('tx_pincode');" />
+					</div>
+					<div class="clear"></div>
+				</div>
+
+			<!-- <div class="form-group">
+			   <label class="form_label">Brand</label>
+			   <div class="select_role_block">
+					  <select name="tx_brand" id="tx_brand" data-role="none">
+							<option value="">-Select-</option>
+							<option value="Sankar">Sankar</option>
+							<option value="Coromandel">Coromandel</option>
+							<option value="CSK">CSK</option>
+							<option value="HSK">HSK</option>
+							<option value="Raasi">Raasi</option>
+					  </select>
+			  </div>
+			  </div>
+			  <div class="form-group">
+				   <label class="form_label">Grade</label>
+				   <div class="select_role_block">
+						  <select name="tx_grade" id="tx_grade" data-role="none">
+								<option value="">-Select-</option>
+								<option value="OPC 43">OPC 43</option>
+								<option value="OPC 53">OPC 53</option>
+								<option value="PPC">PPC</option>
+						  </select>
+				  </div>
+			  </div> -->
+			  <!--<div class="form-group">
+			   <label class="form_label">Item</label>
+			   <div class="select_role_block">
+					  <select name="tx_items" id="tx_items" data-role="none">
+					  </select>
+			  </div>
+			  </div>-->
+			  <!-- <div class="form-group">
+					<label class="form_label">ICL Dealer Pincode</label>
+					<div class="custom-input">
+					  <input type="number" id="tx_pincode" name="tx_pincode" placeholder="Pincode" class="form-input" data-role="none" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onblur="javascript:loadLocation_tx();" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="form-group">
+					<label class="form_label">ICL Dealer Name</label>
+					<select name="tx_dealer" id="tx_dealer" data-role="none">
+					</select>
+					<div class="clear"></div>
+				</div>
+				<div class="form-group">
+					<label class="form_label">No of Bags </label>
+					<div class="custom-input">
+					  <input type="number" id="tx_noofbags" name="tx_noofbags" placeholder="No of Bags" class="form-input" data-role="none" onblur="javascript:calculateMt();" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="form-group">
+					<label class="form_label">Volume(in mT)</label>
+					<div class="custom-input">
+					  <input type="number" id="tx_metricton" name="tx_metricton" placeholder="mT" class="form-input" data-role="none" readonly/>
+					</div>
+					<div class="clear"></div>
+				</div> -->
+				<!--<div class="form-group">
+					<label class="form_label">Amount</label>
+					<div class="custom-input">
+					  <input type="number" id="tx_amount" name="tx_amount" placeholder="Amount" class="form-input" data-role="none" />
+					</div>
+					<div class="clear"></div>
+				</div>-->
+				
+				
+				<br><br><button class="btn btn_primary" onclick="javascript:tx_Submit();" data-role="none" style="margin-bottom: 125px;">Submit</button>
+  
+	</div>
+
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home</li></a>
+					<a href="#reward_pg"> <li><div class="fthumb-icon"><img src="assets/images/app_images/my-rewards.png"></div>My Rewards</li></a>
+					<a href="#addtransactions"> <li><div class=" fthumb-icon qr "><img src="assets/images/app_images/scan.png"></div>Add More Grow More</li></a>
+					 <a href="#profilepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/profile.png"></div>Profile</li></a>
+					 <a href="#service_enquiry"><li><div class="fthumb-icon"><img src="assets/images/app_images/alert.png"></div>Service Request</li> </a>
+				</ul>
+			</div>
+		</div> 
+	</footer>  
+  </div>
+
+
+  <!-- se_pending -->
+  <div data-role="page" data-dom-cache="true" id="se_pending" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">My Approvals</h3>
+		  </div>
+		  <!--<div class="header_right">
+			<div class="header_right_icons">
+			   <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+				</div>
+		  </div>-->
+		</div>
+	  </div>
+	  
+	<div data-role="content" class="ui-content p-20 align-items-start inner_content1 br_t_20 bg_white">
+			
+			<div class="primary_section mb-40">
+				<div class="primary_section_inner">
+					<ul id="se_pending_div"  data-role="listview" data-filter="true" data-filter-placeholder="Search.." data-inset="true">
+						<li>
+							<h2>Loading Members list..</h2>
+						</li>
+					</ul>
+				</div>
+			</div>
+  
+	</div>
+
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<!-- <a href="javascript:getPending_sites_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a> 
+					     <a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a> -->
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer>  
+  </div>
+
+  <!-- se_leads -->
+  <div data-role="page" data-dom-cache="true" id="se_leads" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title"> Approval Sites</h3>
+		  </div>
+		  <!--<div class="header_right">
+			<div class="header_right_icons">
+			   <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+				</div>
+		  </div>-->
+		</div>
+	  </div>
+	  
+	<div data-role="content" class="ui-content p-20 align-items-start inner_content1 br_t_20 bg_white">
+		<div class=" form-group">	
+			<!--  -->
+			<label class="form_label " style="color: black;font-family: 'Source Sans 3';">Search Site</label>
+			<div class="d-flex">
+			<div class="custom-input ml-10" >
+				<input type="text" id="my_pending_site_div" onblur="javascript:getPending_sitesFilter('my_pending_site_div');" name="my_pending_site_div" placeholder="Enter Name / Number" class="form-input" data-role="none" maxlength="50" />
+			</div>
+			<div class="clear"></div>
+			<div>
+				<img src="assets/images/app_images/magnifine.png" onclick="javascript:getPending_sitesFilter('my_pending_site_div');" style="height: 30px; margin-top: 5px;">
+			</div>
+		</div>
+			<ul id="my_panding_site_div" style="margin-bottom: 80px;" data-role="listview"  data-filter-placeholder="Search.." data-inset="true"></ul>
+			<div class="clear"></div>
+			
+		</div>
+
+			<div class="primary_section mb-40">
+				<div class="primary_section_inner1">
+					<ul id="se_leads_div" data-role="listview"  data-filter-placeholder="Search.." data-inset="true">
+						<li>
+							<h2>Loading leads..</h2>
+						</li>
+					</ul>
+				</div>
+			</div>
+	    </div>
+
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<!-- <a href="javascript:getPending_sites_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a>
+					<a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a> -->
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer>  
+  </div>
+
+  <!-- salesdata_se -->
+  <div data-role="page" data-dom-cache="true" id="salesdata_se" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">My Approvals</h3>
+		  </div>
+		  <!--<div class="header_right">
+			<div class="header_right_icons">
+			   <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+				</div>
+		  </div>-->
+		</div>
+	  </div>
+	  
+	<div data-role="content" class="ui-content p-20 align-items-start inner_content1 br_t_20 bg_white">
+			
+			<div class="counter_form_none">
+				<label class="form_label">Mobile No.<span style="color: red;">*</span></label>
+              	<div class="ui-grid-solo" style="width:100%; margin:0 auto;">
+								<div class="ui-block-a">
+									<!-- <input type="number" id="approval_se_mob" class="approval_comment" placeholder="Mobile No.*" data-role="none" maxlength="10" onblur="javascript:checkmobile('approval_se_mob');" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" /> -->
+									<input type="number" id="approval_se_mob" class="approval_comment" placeholder="Mobile No.*" data-role="none" readonly />
+								</div>
+				</div><br>
+
+				<label class="form_label">Comments</label>
+				<div class="ui-grid-solo" style="width:100%;margin:0 auto;">
+								<div class="ui-block-a">
+									<input type="text" id="approval_se_comments" class="approval_comment" placeholder="Comments" data-role="none" />
+								</div>
+				</div><br>
+
+				<!--<label class="form_label">Status<span style="color: red;">*</span></label>
+				<div class="additional_form" style="width:100%;margin:0 auto; padding: 0px;">
+					<div class="additional_input">
+					<select name="approval_se_type" id="approval_se_type" class="additional_control" data-role="none" data-mini="true" data-inline="true">
+                                <option value="">-Select-</option>
+								<option value="Approved">Approve</option>
+								<option value="Rejected">Reject</option>
+					</select>
+                    </div>
+				</div><br>-->
+				<label class="form_label">Reason for Rejection</label>
+				<div class="additional_form" style=" margin:0 auto; padding: 0px;">
+					<div class="additional_input">
+					<select name="approval_se_reason" id="approval_se_reason" class="additional_control" data-role="none" data-mini="true" data-inline="true">
+						<option value="">-Select Reason (if rejected):-</option>
+						<option value="Invalid Details">1. Invalid Details</option>
+						<option value="Wrong KYC Document">2. Wrong KYC Document</option>
+						<option value="Site doesn't exist">3. Site doesn't exist</option>         
+					</select>
+                    </div>
+				</div><br>
+				<!-- <label class="form_label">Reason for rejection</label>
+				<div class="ui-grid-solo" style="width:100%;margin:0 auto;">
+								<div class="ui-block-a">
+									<input type="text" id="approval_se_reason" class="approval_comment" placeholder="Reason (if rejected)" data-role="none" />
+								</div>
+				</div> -->
+				<!--<div class="additional_form" style="width:85%;margin:0 auto;">
+					<label class="additional_label">Distributor*:</label>
+					<div class="additional_input">
+					<select name="approval_se_dist_list" id="approval_se_dist_list" class="additional_control" data-role="none" data-mini="true" data-inline="true">
+					</select>
+                    </div>
+				</div>-->
+		
+			</div>
+			<div class="ui-grid-solo mt-10">
+					<div class="ui-block-a form_btns"> <a href="javascript:submitData_se_reject();" id="complaint_button_se" style="width:40%;" class="btn pop_btn btn_primary">Submit</a> </div>
+			</div>
+  
+	</div>
+
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<!-- <a href="javascript:getPending_sites_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a>
+					<a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a> -->
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer> 
+  </div>
+
+
+  <!-- se_pending_txns -->
+  <div data-role="page" data-dom-cache="true" id="se_pending_txns" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">Transactions Approvals</h3>
+		  </div>
+		  <!--<div class="header_right">
+			<div class="header_right_icons">
+			   <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+				</div>
+		  </div>-->
+		</div>
+	  </div>
+	  
+	<div data-role="content" class="ui-content p-20 align-items-start inner_content1 br_t_20 bg_white">
+		<div class=" form-group"  >	
+			<!--  -->
+			<label class="form_label" style="color: black;font-family: 'Source Sans 3';">Search Transaction</label>
+			<div class="d-flex">
+				<div class="custom-input ml-10" >
+					<input type="text" id="my_panding_tran_div" name="my_panding_tran_div" onblur="javascript:Pending_filterTran('my_panding_tran_div');" placeholder="Enter Name / Number" class="form-input" data-role="none" maxlength="50" />
+				</div>
+				<div class="clear"></div>
+				<div>
+					<img src="assets/images/app_images/magnifine.png" onclick="javascript:Pending_filterTran('my_panding_tran_div');" style="height: 30px; margin-top: 5px;">
+				</div>
+			</div>
+			<ul id="se_searched_txns_div" style="margin-bottom: 90px;" data-role="listview"  data-filter-placeholder="Search.." data-inset="true"></ul>
+			<div class="clear"></div>
+		</div>
+
+			<div class="primary_section mb-40">
+				<div class="primary_section_inner1">
+					<ul id="se_pending_txns_div" data-role="listview"  data-filter-placeholder="Search.." data-inset="true">
+						<!-- <li>
+							<h2>Loading transactions list..</h2>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+  
+	</div>
+
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<!-- <a href="javascript:getPending_sites_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a>
+					<a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a> -->
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer> 
+  </div>
+
+  <!-- salesdata_se -->
+  <div data-role="page" data-dom-cache="true" id="salesdata_se_txns" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">Transactions Approvals</h3>
+		  </div>
+		  <!--<div class="header_right">
+			<div class="header_right_icons">
+			   <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+				</div>
+		  </div>-->
+		</div>
+	  </div>
+	  
+	<div data-role="content" class="ui-content p-20 align-items-start inner_content1 br_t_20 bg_white">
+			
+			<div class="counter_form_none">
+				
+              	<div class="ui-grid-solo" style="  margin:0 auto;">
+					<div class="ui-block-a" style="display:none;">
+						<input type="text" id="approval_se_txns_id" class="approval_comment" placeholder="Transaction ID*" data-role="none" readonly />
+					</div>			
+				</div><br>
+
+				<label class="form_label">IHB Mobile No.</label>
+				<div class="ui-grid-solo" style="  margin:0 auto;">
+					<div class="ui-block-a">
+						<input type="text" id="approval_se_txns_ihbmobile" class="approval_comment" placeholder="IHB Mobile No." data-role="none" readonly />
+					</div>			
+				</div><br>
+
+				<label class="form_label">Contractor Mobile No.<span style="color: red;">*</span></label>
+				<div class="ui-grid-solo" style=" margin:0 auto;">
+					<div class="ui-block-a">
+						<input type="number" id="approval_se_txns_contractormob" class="approval_comment" placeholder="Contractor Mobile No.*" data-role="none" readonly />
+					</div>			
+				</div><br>
+
+				<label class="form_label">Quantity<span style="color: red;">*</span></label>
+				<div class="ui-grid-solo" style=" margin:0 auto;">
+					<div class="ui-block-a">
+						<input type="number" id="approval_se_txns_noofbags" class="approval_comment" placeholder="Quantity*" data-role="none" />
+					</div>			
+				</div><br>
+
+				<label style="font-size: 11px;">Verification field<span style="color: red;">*</span></label>
+				<div class="select_role_block">
+					<select name="approval_se_txns_verification_field" id="approval_se_txns_verification_field" data-role="none" onchange="javascript:setFileName();">
+						<option  selected="selected">Verification field</option>
+						<option value="Physical">Physical</option>
+						<option value="Virtual" >Virtual</option>
+					</select>
+				</div><br>
+				<!-- <label class="form_label">Comments</span></label>
+				<div class="ui-grid-solo" style=" margin:0 auto;">
+								<div class="ui-block-a">
+									<input type="text" id="approval_se_txns_comments" class="approval_comment" placeholder="Comments" data-role="none" />
+								</div>
+				</div><br> -->
+
+				<label class="additional_label">Status:<span style="color: red;">*</span></label>
+				<div class="additional_form" style=" margin:0 auto; padding: 0px;">
+					<div class="additional_input">
+					<select name="approval_se_txns_type" id="approval_se_txns_type" class="additional_control" data-role="none" data-mini="true" onchange="javascript:toggle_reason_showhideapprovals();" data-inline="true">
+						<option value="">-Select-</option>
+						<option value="Approved">Approve</option>
+						<option value="Rejected">Reject</option>          
+					</select>
+                    </div>
+				</div><br>
+
+                <div id="reason_showhideapprovals" style="display: none;">
+				  <label class="form_label">Reason for Rejection :<span style="color: red">*</span></label>
+				   <div class="additional_form" style=" margin:0 auto; padding: 0px;">
+					<div class="additional_input">
+					  <select name="approval_se_txns_reason" id="approval_se_txns_reason" class="additional_control" data-role="none" data-mini="true" data-inline="true">
+                        <option value="">-Select Reason(if rejected)-</option>
+						<option value="Wrong Entry">Wrong Entry</option>
+					    <option value="Duplicate entry">Duplicate entry</option>
+						<option value="Incorrect entry">Incorrect entry</option> 
+						<option value="Unable to verify">Unable to verify</option>              
+					  </select>
+                    </div>
+				  </div>
+				  <div class="ui-grid-solo mt-10 mb-100">
+					<div class="ui-block-a form_btns"> 
+					<div class="btmsize">
+						<a href="javascript:submitData_txns_se('Rejected');"  id="complaint_button_se2"  class="btn pop_btn btn_primary">Reject</a>
+					</div>
+					</div>
+				  </div>
+			   </div>
+
+			   <div id="reason_showhiderejects" style="display: none;">
+			   <label class="form_label" >Approval reason:<span style="color: red">*</span></label>
+			   <div class="additional_form" style=" margin:0 auto; padding: 0px;">
+				<div class="additional_input">
+				  <select name="approvel_se_leads_approval" id="approvel_se_leads_approval" class="additional_control" data-role="none" data-mini="true" data-inline="true">
+					<option value="">-Select Reason(if approved)-</option>
+					<option value="Confirm by IHB">Confirm by IHB</option>
+					<option value="Self check">Self check</option>            
+				  </select>
+				</div>
+			  </div> 
+			  <div class="ui-grid-solo mt-10 mb-100">
+				<div class="ui-block-a form_btns"> 
+				<div class="btmsize">
+					<a href="javascript:submitData_txns_se('Approved');"  id="complaint_button_se1" class="btn pop_btn btn_primary">Submit</a> 
+				</div>
+				</div>
+			  </div>
+			  
+			</div>
+			</div>
+			</div>
+	     </div>
+
+	<footer style="display: none;">
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<a href="javascript:getPending_sites_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a>
+					<a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a>
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer>
+  <!-- </div> -->
+
+
+  <!-- salesdata_se -->
+  <div data-role="page" data-dom-cache="true" id="salesdata_se_leads" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">Site Approvals</h3>
+		  </div>
+		  <!--<div class="header_right">
+			<div class="header_right_icons">
+			   <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+				</div>
+		  </div>-->
+		</div>
+	  </div>
+
+	  <!-- <div class="languagesss" style="display: none;">
+		<div onclick="languagePopup()" class="close-btn">x</div>
+		<label class="form_label"  style="margin-bottom: -5px;"><span id="salesdata_se_leads_timef_label">Time Frame (No. of Days)<span style="color: red;">*</span></span></label>
+		<div class="additional_form" style=" margin:0 auto;">
+			<div class="additional_input" style="margin-left: -10px;
+			margin-right: -10px; width: 110%;">
+			<select name="salesdata_se_leads_timef" id="salesdata_se_leads_timef" class="additional_control" data-role="none" data-mini="true" data-inline="true">
+				<option value="">-Select-</option>
+				<option value="7">7 Day</option>
+				<option value="30">30 Day</option>
+				<option value="30+">More then 30 Day</option>          
+			</select>
+			</div>
+		</div>
+
+		<label class="form_label"  style="margin-bottom: -5px;"><span id="salesdata_se_leads_timef_label">Time Frame (No. of Days)<span style="color: red;">*</span></span></label>
+		<div class="additional_form" style=" margin:0 auto;">
+			<div class="additional_input" style="margin-left: -10px;
+			margin-right: -10px; width: 110%;">
+			<input type="date" />       
+			</select>
+			</div>
+		</div>
+
+		<button type="button" >Submit</button>
+	</div> -->
+
+
+	<div data-role="content" class="ui-content p-20 mb-80 align-items-start inner_content1 br_t_20 bg_white">
+			<div class="counter_form_none">
+              	<div class="ui-grid-solo" style="  margin:0 auto;">
+					<div class="ui-block-a" style="display:none;">
+						<input type="text" id="salesdata_se_leads_cust_id" class="approval_comment" placeholder="Transaction ID*" data-role="none"  />
+					</div>				
+				</div><br>
+
+				
+				<input type="hidden" id="approval_se_verification_select" />
+
+				<!--label class="form_label" style="margin-bottom: -5px;">Site Contruction Status<span style="color: red;">*</span></label>
+				<div class="additional_form" style=" margin:0 auto;">
+					<div class="additional_input" style="margin-left: -10px;
+					margin-right: -10px; width: 110%;">
+					<select name="salesdata_se_leads_sitecs"  id="salesdata_se_leads_sitecs" class="additional_control" data-role="none" data-mini="true" data-inline="true" onchange="javascript:toggle_timeframe_txt();">
+                        
+						<option value="">-Select-</option>
+						<option value="Started">Started</option>
+						<option value="Not Started">Not Started</option>		        
+					</select>
+                    </div>
+				</div>
+
+				<label class="form_label"  style="margin-bottom: -5px;"><span id="salesdata_se_leads_timef_label">Time Frame (No. of Days)<span style="color: red;">*</span></span></label>
+				<div class="additional_form" style=" margin:0 auto;">
+					<div class="additional_input" style="margin-left: -10px;
+					margin-right: -10px; width: 110%;">
+					<select name="salesdata_se_leads_timef" id="salesdata_se_leads_timef" class="additional_control" data-role="none" data-mini="true" data-inline="true">
+						<option value="">-Select-</option>
+						<option value="7">7 Day</option>
+						<option value="30">30 Day</option>
+						<option value="30+">More then 30 Day</option>          
+					</select>
+                    </div>
+				</div> 
+				
+				<label class="form_label">Status<span style="color: red;">*</span></label>
+				<div class="additional_form" style=" margin:0 auto; padding: 0px;">
+					<div class="additional_input">
+					<select name="approval_se_leads_type" id="approval_se_leads_type" class="additional_control" data-role="none" data-mini="true" data-inline="true" onchange="javascript:toggle_reason_nonapprovals();">
+						<option value="">-Select-</option>
+						<option value="Approved">Approve</option>
+						<option value="Rejected">Reject</option>         
+					</select>
+                    </div>
+				</div-->
+				
+				<!-- <label style="font-size: 11px;">Verification field<span style="color: red;">*</span></label>
+				<div class="select_role_block">
+					<select name="approval_se_verification_field" id="approval_se_verification_field" data-role="none">
+						<option  selected="selected">Verification field</option>
+						<option value="Physical">Physical</option>
+						<option value="Virtual" >Virtual</option>
+					</select>
+				</div><br> -->
+
+				<label class="form_label" style="margin-bottom: -5px;"><b>Site Address</b></label><br>
+				<div class="additional_form" id="reason_nonapprovals" style="display: none;">
+					<label class="additional_label">Reason:</label>
+					<div class="additional_input">
+					<select name="approval_se_leads_reason" id="approval_se_leads_reason" class="additional_control" data-role="none" data-mini="true" data-inline="true">
+						<option value="">-Select-</option>
+						<option value="No Enquiry from Customer">No Enquiry from Customer</option>
+						<option value="No Construction">No Construction</option>
+						<option value="No ACC presence">No ACC presence</option>
+						<option value="No response from customer">No response from customer</option>
+						<option value="Other Business Areas (reroute)">Other Business Areas (reroute)</option>
+						<option value="Duplicate">Duplicate</option>             
+					</select>
+                    </div>
+				</div>
+		
+				<!-- <label style="font-size: 11px;">Area/Location</label>
+				<div class="custom-input ">
+					<input type="text" id="approval_se_loc" placeholder="Area/Location" class="form_de"
+						data-role="none">
+				</div> -->
+				<label style="font-size: 11px;">Address/Plot No.<span style="color: red;">*</span></label>
+				<div class="custom-input ">
+					<input type="text" id="approval_se_address" placeholder="Address/Plot No." class="form_de"
+						data-role="none" />
+				</div>
+
+				
+
+				<label style="font-size: 11px;">Select State<span style="color: red;">*</span></label>
+				<div class="custom-input">
+					<div class="select_role_block">
+						<select name="approval_se_state" id="approval_se_state" onchange="javascript:fetchDistrictlist_sreg('approval_se_state','approval_se_dist');" data-role="none">
+						</select>
+					</div>
+				</div>
+
+				<label style="font-size: 11px;">Select District<span style="color: red;">*</span></label>
+				<div class="custom-input">
+					<div class="select_role_block">
+						<select name="approval_se_dist" id="approval_se_dist" data-role="none" onchange="javascript:showDistrictCityList('approval_se_dist','approval_se_city');">
+							<option value="" disabled="disabled" selected="selected">-Select District-</option>
+						</select>
+					</div>
+				</div>
+
+				<label style="font-size: 11px;">Select City<span style="color: red;">*</span></label>
+				<div class="custom-input">
+					<div class="select_role_block">
+						<select name="approval_se_city" id="approval_se_city" data-role="none">
+							<option value="" disabled="disabled" selected="selected">-Select City-</option>
+						</select>
+					</div>
+				</div>	
+
+
+					 <label style="font-size: 11px;">Total Cement potential (Bags)<span style="color: red;">*</span></label>
+					<div class="custom-input ">
+						<!-- <div class="ui-block-a"> -->
+							<input type="text"  id="salesdata_se_leads_cement_potentiall" class="form_de" onblur="acc_tcc_bag('salesdata_se_leads_cement_potentiall')" min="1" max="9999" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  placeholder="Total Cement potential" data-role="none" />
+						<!-- </div>				 -->
+					</div>
+	
+					<label style="font-size: 11px;">Cement Consumption (Bags) Till Date<span style="color: red;">*</span></label>
+					<div class="custom-input ">
+						<!-- <div class="ui-block-a"> -->
+							<input type="text"  id="salesdata_se_leads_cement_consumed" onblur="acc_tcc_bag2('salesdata_se_leads_cement_consumed')" class="form_de" placeholder="Cement Consumption Till Date" data-role="none" />
+						<!-- </div>				 -->
+					</div>
+	
+					<label style="font-size: 11px;">Balance Cement Consumption (Bags)</label>
+					<div class="custom-input ">
+						<!-- <div class="ui-block-a"> -->
+							<input type="text"  id="salesdata_se_leads_cement_leftpotentiall" readonly class="form_de" placeholder="Balance Cement Consumption" data-role="none" />
+						<!-- </div>				 -->
+					</div> 
+                    <!-- <div>
+					<label class="form_label">Status<span style="color: red;">*</span></label>
+				    <div class="additional_form" style=" margin:0 auto; padding: 0px;">
+					<div class="additional_input">
+					<select name="salesdata_se_leads_type" id="salesdata_se_leads_type" class="additional_control" data-role="none" data-mini="true" data-inline="true" onchange="javascript:toggle_reason_showhideapprovalsonsite();">
+						<option value="">-Select-</option>
+						<option value="Approved">Approve</option>
+						<option value="Rejected">Reject</option>         
+					</select>
+                    </div>
+				   </div>
+			      </div><br> -->
+
+				<div id="reason_showhidesiterejects" style="display: none;">
+				<label class="form_label">Reason for Rejection :<span style="color: red">*</span></label>
+				<div class="additional_form">
+				 <div class="additional_input">
+				   <select name="reason_se_leads_txns_reason" id="reason_se_leads_txns_reason" class="additional_control" data-role="none" data-mini="true" data-inline="true">
+					 <option value="" disabled="disabled">-Select Reason (if rejected)-</option>
+					 <option value="Wrong Entry">Wrong Entry</option>
+					 <option value="Duplicate entry">Duplicate Entry</option>
+					 <option value="Incorrect entry">Incorrect Entry</option> 
+					 <option value="Unable to verify">Unable to Verify</option>              
+				   </select>
+				 </div>
+			   </div>
+			   <div style="margin-bottom: 15%; " class="ui-grid-solo mt-10">
+				<div class="ui-block-a form_btns"> 
+					<a href="javascript:submitData_leads_se('Rejected','select_reject_show_submit');"  id="select_reject_show_submit" style="width:100%;" class="btn pop_btn btn_primary">Reject</a>
+				</div>
+			</div>
+			</div>
+
+			   <div id="reason_showhidesiteapprovals">
+			   <label class="form_label">Approvel reason:<span style="color: red">*</span></label>
+				<div class="additional_form">
+				 <div class="additional_input">
+				   <select name="approvel_se_leads_txns" id="approvel_se_leads_txns" class="additional_control" data-role="none" data-mini="true" data-inline="true">
+					 <option value="" disabled="disabled">-Select Reason (if approved)-</option>
+					 <option value="Confirm by IHB">Confirm by IHB</option>
+					 <option value="Self check">Self Check</option>            
+				   </select>
+				 </div>
+			   </div>
+			
+			<div style="margin-bottom: 15%; "   class="ui-grid-solo mt-10">
+				<div class="ui-block-a form_btns"> 
+					<button onclick="javascript:submitData_leads_se('Approved','approve_submit_button');" id="site_approve_submit"  style="width:100%;" class="btn pop_btn btn_primary">Submit</button>
+				</div>
+			</div>
+		   </div>		
+		 </div> 
+	    </div>
+
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<!-- <a href="javascript:getPending_sites_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a>
+					<a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a> -->
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer>
+  </div>
+
+<!-- my_contractor -->
+  <div data-role="page" data-dom-cache="true" id="my_contractor" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">View Contractor </h3>
+		  </div>
+		  <!--<div class="header_right">
+			<div class="header_right_icons">
+			   <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+				</div>
+		  </div>-->
+		</div>
+	  </div>
+	  
+	<div data-role="content" class="ui-content p-20 align-items-start inner_content1 br_t_20 bg_white">
+			<div class="primary_section mb-40">
+				<div class="primary_section_inner">
+                  <!--search start onchange="javascript:filterContractor('my_search_contractor_div');" -->
+					<div class=" form-group mt-10"  >	
+						<label class="form_label" style="color: black; margin-top: 70px; font-family: 'Source Sans 3';">Search Contractor </label>
+						    <div class="d-flex">
+								<div class="custom-input">
+									<input type="text" id="my_search_contractor_div" name="my_search_contractor_div" placeholder="Enter Name / Number" class="form-input" data-role="none" maxlength="50" style=" margin-left: -18px;" />
+								</div>
+								<div class="clear"></div>
+								<div>
+									<img src="assets/images/app_images/magnifine.png" onclick="javascript:filterContractor('my_search_contractor_div');" style="height: 30px; margin-top: 5px;">
+								</div>
+					        </div>
+						<ul id="my_searched_contractor_div" data-role="listview"  data-filter-placeholder="Search.." data-inset="true">
+							<!-- <li>data-filter="true"
+								<h2>Loading list..</h2>
+							</li> -->
+						</ul>
+						<div class="clear"></div>
+					</div>
+                  <!--search end  -->
+					<ul id="my_contractor_div" data-role="listview" data-filter-placeholder="Search.." data-inset="true">
+						<li>
+							<h2>Loading list..</h2>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<!-- <a href="javascript:getPending_sites_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a>
+					<a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a> -->
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer> 
+  </div>
+
+  <div data-role="page" data-dom-cache="true" id="my_site" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">View Sites </h3>
+		  </div>
+		  
+		</div>
+	  </div>
+	  
+	<div data-role="content" class="ui-content p-20 align-items-start inner_content1 br_t_20 bg_white">
+		<div class=" form-group"  >	
+			<label class="form_label " style="color: black;font-family: 'Source Sans 3';">Search Site</label>
+			<div class="d-flex">
+				<!-- onchange="javascript:filterSites('my_search_site_div');" -->
+				<div class="custom-input" >
+					<input type="text" id="my_search_site_div" name="my_search_site_div" onchange="javascript:filterSites('my_search_site_div');" placeholder="Enter Name / Number" class="form-input" data-role="none" maxlength="50" />
+				</div>
+				<div class="clear"></div>
+				<div>
+					<img src="assets/images/app_images/magnifine.png" onclick="javascript:filterSites('my_search_site_div');" style="height: 30px; margin-top: 5px;">
+				</div>
+		    </div>					
+			<ul id="my_searched_site_div" style="margin-bottom: 50px;" data-role="listview"  data-filter-placeholder="Search.." data-inset="true"></ul>
+			<div class="clear"></div>
+		</div>
+			<div class="primary_section mt-50 mb-40">
+				<div class="primary_section_inner">
+					<ul id="my_site_div" data-role="listview"  data-filter-placeholder="Search.." data-inset="true">
+						<li>
+							<h2>Loading list..</h2>
+						</li>
+					</ul>
+				</div>
+			</div>
+  
+	</div>
+
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<!-- <a href="javascript:getPending_sites_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a>
+					<a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a> -->
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer> 
+  </div>
+
+  <!-- my_txnslist -->
+  <div data-role="page" data-dom-cache="true" id="my_txnslist" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">View Transactions</h3>
+		  </div>
+		</div>
+	  </div>
+	  
+	<div data-role="content" class="ui-content p-20 align-items-start inner_content1 br_t_20 bg_white">
+		<!--  -->
+
+		<div class="form-group"  >	
+			<label class="form_label " style="color: black;font-family: 'Source Sans 3'; " >Search Transaction</label>
+			<div class="d-flex">
+				<div class="custom-input ml-10" >
+					<input type="text" id="my_search_tran_div" name="my_search_tran_div" onblur="javascript:filterTransation('my_search_tran_div');" placeholder="Enter Name / Number" class="form-input" data-role="none" maxlength="50" />
+				</div>
+				<div class="clear"></div>
+				<div>
+					<img src="assets/images/app_images/magnifine.png" onclick="javascript:filterTransation('my_search_tran_div');" style="height: 30px; margin-top: 5px;">
+				</div>
+		    </div>
+			<ul id="my_searched_tran_div" style="margin-bottom: 50px;" data-role="listview"  data-filter-placeholder="Search.." data-inset="true"></ul>
+			<div class="clear"></div>
+		</div>
+
+			<div class="primary_section mt-50 mb-40">
+				<div class="primary_section_inner">
+					<ul id="my_txnslist_div" data-role="listview"  data-filter-placeholder="Search.." data-inset="true">
+						<li>
+							<h2>Loading list..</h2>
+						</li>
+					</ul>
+				</div>
+			</div>
+	    </div>
+
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<!-- <a href="javascript:getPending_sites_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a>
+					<a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a> -->
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer> 
+  </div>
+
+
+
+<!--Transaction-->
+<div data-role="page" data-dom-cache="true" id="transactions" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+	  <div class="d-flex align-items-center justify-content-between main_header bb1">
+		<div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn1" data-role="none"> <img src="assets/images/back_btn.png" class="img-responsive" alt=""> </a>
+		  <h3 class="header_title">Transactions</h3>
+		</div>
+		<div class="header_right">
+			<a href="#notificationspg" class="notifiction_btn notification_active ui-link"><img src="assets/images/notification_icon.png" class="img-responsive" alt=""></a>
+		</div>
+	  </div>
+	</div>
+	<div data-role="content" class="ui-content p-0 d-flex align-items-start bg_white">
+	  <div class="w-100">
+		<div class="out_wrapper">
+			  <div class="inner_wrapper bg-white p-0 mt-30">				
+				  <a href="#" class="">
+					  <div class="d-flex align-items-center justify-content-between pl-4 pr-4">
+						  <h4 class="p_bal"><span id="pointbal_head ">Point Balance</span></h4>
+						   
+					  </div>
+					  <div class="d-flex align-items-center justify-content-between mt-10 pl-4 pr-4">
+						<h2 class="bal_point"><span>&#8377; 5000</span></h2>
+					</div>
+					<div>
+						<h2></h2><br>
+						<h2></h2>
+					</div>
+				  </a>
+				  <div class="bb1 py-3">
+					  <div class="statement_link">
+						  <a href="#requestStatement" class="points_bal_btn">
+							  <div class="pl-4 pr-4 w-100">
+								  <div class="points_bal d-flex align-items-center">
+									  <img src="assets/images/request_statement_icon.png" alt="">
+									  <h4>Request Statement</h4>
+								  </div>								
+							  </div>								
+						  </a>
+					   </div>				
+				    </div>
+				  <div class="recent_header">
+					  <div class="pl-4 pr-4 d-flex align-items-center justify-content-between">
+						  <h5 class="transfer_heading">Transaction History</h5>
+						  <div class="filter_nav">
+							  <a href="#" id="toggleFilter1" > <img src="assets/images/filter_icon.png" class="img-responsive" alt="" /> </a>
+						  </div>
+					  </div>
+				  </div>
+			  </div>	
+				  
+			  <div id="transfers">				
+					<div class="recent_transfer">
+					  <div class="recent_transfer_header pl-4 pr-4">January 2022</div>
+					  <div class="recent_block pl-5 pr-5">
+						  <div class="recent_user_icon1"> <img src="assets/images/pointredeem.png" class="img-responsive" alt=""/> </div>
+						  <div class="recent_user_details">						
+							  <p class="recent_detail_text ">Points Revoked from Lakshya  Industries</p>
+							  <p class="recent_date">20/10/2022 10:21 AM</p>
+						  </div>
+						  <div class="recent_user_points"><h2 class="text_green">+200<span>Points</span></h2></div>						
+					  </div>
+					  <div class="recent_block pl-5 pr-5">
+						  <div class="recent_user_icon1"> <img src="assets/images/pointredused.png" class="img-responsive" alt=""/> </div>
+						  <div class="recent_user_details">						
+							  <p class="recent_detail_text ">Points Redeemed from Lakshya  Industries</p>
+							  <p class="recent_date">20/10/2022 10:21 AM</p>
+						  </div>
+						  <div class="recent_user_points"><h2 class="text_red">-100<span>Points</span></h2></div>						
+					  </div>
+				  </div>
+					<div class="recent_transfer mb-70">
+					  <div class="recent_transfer_header pl-4 pr-4">September 2022</div>
+					  <div class="recent_block pl-5 pr-5">
+						  <div class="recent_user_icon1"> <img src="assets/images/pointredeem.png" class="img-responsive" alt=""/> </div>
+						  <div class="recent_user_details">						
+							  <p class="recent_detail_text ">Points Revoked from Lakshya  Industries</p>
+							  <p class="recent_date">20/09/2022 10:21 AM</p>
+						  </div>
+						  <div class="recent_user_points"><h2 class="text_green">+200<span>Points</span></h2></div>						
+					  </div>
+					  <div class="recent_block pl-5 pr-5">
+						  <div class="recent_user_icon1"> <img src="assets/images/pointredused.png" class="img-responsive" alt=""/> </div>
+						  <div class="recent_user_details">						
+							  <p class="recent_detail_text">Points Redeemed from Lakshya  Industries</p>
+							  <p class="recent_date">20/09/2022 10:21 AM</p>
+						  </div>
+						  <div class="recent_user_points"><h2 class="text_red">-100<span>Points</span></h2></div>						
+					  </div>
+				  </div> 
+			</div>
+		  </div>
+		<div id="filter_panel1" class="filter_panel1 bg_white">
+			<div class="">
+			  <div class="ui-grid-a">
+				<div class="ui-block-a">
+				  <h3>Filter Transactions</h3>
+				</div>
+				<div class="ui-block-b text-right"> <a href="#" class="filter_close1" id="filterClose1">+</a> </div>
+			  </div>
+			  <div class="padding0_10px">
+				<label class="mb-0 custom_check">
+				  <input type="radio" name="filter_transaction" id="filter_all" data-role="none" value="All" data-cacheval="false" />
+				  <span class="custom_radio"></span> All </label>
+			  </div>
+			  <div class="padding0_10px">
+				<label class="mb-0 custom_check">
+				  <input type="radio" name="filter_transaction" id="filter_recieved" data-role="none" value="Gift" data-cacheval="false" />
+				  <span class="custom_radio"></span> Received </label>
+			  </div>
+			  <div class="padding0_10px">
+				<label class="mb-0 custom_check">
+				  <input type="radio" name="filter_transaction" id="filter_redeemed" data-role="none" value="Redeem" data-cacheval="false" />
+				  <span class="custom_radio"></span> Redeemed </label>
+			  </div>
+			  <div class="padding0_10px">
+				<label class="mb-0 custom_check">
+				  <input type="radio" name="filter_transaction" id="filter_revoked" data-role="none" value="Revoke" data-cacheval="false" />
+				  <span class="custom_radio"></span> Revoked </label>
+			  </div>
+			</div>
+		  </div>
+		  <div class="overlay"></div>
+		</div>
+	</div>
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home</li></a>
+					<a href="#reward_pg"> <li><div class="fthumb-icon"><img src="assets/images/app_images/my-rewards.png"></div>My Rewards</li></a>
+					<a href="#addtransactions"> <li><div class=" fthumb-icon qr "><img src="assets/images/app_images/scan.png"></div>Add More Grow More</li></a>
+					 <a href="#profilepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/profile.png"></div>Profile</li></a>
+					 <a href="#requestStatement"><li><div class="fthumb-icon"><img src="assets/images/app_images/alert.png"></div>Service Request</li> </a>
+				</ul>
+			</div>
+		</div> 
+	</footer>
+	 
+  </div>
+
+
+
+  <div data-role="page" data-dom-cache="true" id="requestStatement" class=" full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+	  <div class="bgall d-flex align-items-center justify-content-between main_header bb1">
+		<div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn1" data-role="none"> <img src="assets/images/back_btn.png" class="img-responsive" alt=""> </a>
+		  <h3 class="header_title">Request Statement</h3>
+		</div>
+	  </div>
+	</div>
+	<div data-role="content" class="ui-content p-0 d-flex align-items-start bg_white">
+	  <div class="w-100">
+		<div class="out_wrapper">
+			  <div class="inner_wrapper bg-white mt-20">
+				  <div class="ui-grid-solo" id="retchoice_emailstats_div">
+					  <div class="statment_sel_block">
+						  <label>Select Transaction Type</label>
+						  <div class="statment_sel_block_inner mt-20">
+							  <select name="retchoice_emailstats" class="statement_select font_16" id="" data-role="none">
+								  <option value="purchase" id="retchoice_emailstats_purchase">My Purchase</option>
+								  <option value="sale" id="retchoice_emailstats_sale">My Sale</option>
+							  </select>							
+						  </div>
+					  </div>
+				  </div>
+				  <div class="statment_sel_block">
+					  <div class="statment_sel_block_inner">
+						  <label class="statement_select mb-0" id="toggleFilter21">Select Time Period</label>
+					  </div>
+				  </div>
+				  
+				  <div class="mt-20">
+					  <a href="#" class="btn btn_primary">Proceed</a>
+				  </div>
+				  <div class="filter_panel1" id="filter_panel21" style="display: none">
+					  <div class="ui-grid-a">
+						  <div class="ui-block-a mb-20">
+							  <h3>Select Time Period</h3>
+						  </div>
+						  <div class="ui-block-b text-right"> <a href="#" class="filter_close1" id="filterClose2">+</a> </div>
+					  </div>
+					  <div name="filter_transaction2_div" id="filter_transaction2_div">						
+						  <div name="estmt" id="estmt">
+							  <div class="padding0_10px">
+								  <label class="mb-0 custom_check">
+								  <input type="radio" name="input_email_statement" id="radio-1-month" data-role="none" value="last1month" data-cacheval="false" checked/> <span class="custom_radio"></span> Last 1 Month 
+								  </label>
+							  </div>
+							  <div class="padding0_10px">
+								  <label class="mb-0 custom_check">
+									  <input type="radio" name="input_email_statement" id="radio-3-month" data-role="none" value="last3months" data-cacheval="false" /> <span class="custom_radio"></span> Last 3 Months </label>
+							  </div>
+							  <div class="padding0_10px">
+								  <label class="mb-0 custom_check">
+									  <input type="radio" name="input_email_statement" id="radio-6-month" data-role="none" value="last6months" data-cacheval="false" /> <span class="custom_radio"></span> Last 6 Months </label>
+							  </div>
+							  <div class="padding0_10px">
+								  <label class="mb-0 custom_check">
+									  <input type="radio" name="input_email_statement" id="radio-1-year" data-role="none" value="last1year" data-cacheval="false" /> <span class="custom_radio"></span> Last 1 Year </label>
+							  </div>
+							  <div class="padding0_10px">
+								  <label class="mb-0 custom_check">
+									  <input type="radio" name="input_email_statement" id="radio-sel" data-role="none" value="selectduration" data-cacheval="false" /> <span class="custom_radio"></span> Custom Date </label>
+							  </div>
+							  <div class="clear mt-10"></div>
+							  <div class="date_select" id="dateduration" style="display:none">
+								  <div class="ui-grid-a">
+									  <div class="ui-block-a padding0_5px">
+										  <label class=" mb-0">From Date</label>
+										  <input type="date" class="date_input" data-role="none" placeholder="From Date" id="durationfrom" /> </div>
+									  <div class="ui-block-b padding0_5px">
+										  <label class=" mb-0">To Date</label>
+										  <input type="date" class="date_input" data-role="none" placeholder="To Date" id="durationto" /> </div>
+								  </div>
+							  </div>
+							  <div style="display: flex;" class="mb-40">
+								<a href="javascript:sendemailstatement();" class="btn btn_primary mt-10"  style="width:49%">Proceed</a>
+								<a href="javascript:sendemailstatement();" class="btn btn_primary mt-10" style="width:49%">Cancel</a>
+							  </div>
+							 
+						  </div>
+					  </div>						
+				  </div>
+				  <div class="overlay"></div>
+			  </div>	
+		  </div>      
+		<div class="overlay"></div>
+	  </div>
+	</div>
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home</li></a>
+					<a href="#reward_pg"> <li><div class="fthumb-icon"><img src="assets/images/app_images/my-rewards.png"></div>My Rewards</li></a>
+					<a href="#addtransactions"> <li><div class=" fthumb-icon qr "><img src="assets/images/app_images/scan.png"></div>Add More Grow More</li></a>
+					 <a href="#profilepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/profile.png"></div>Profile</li></a>
+					 <a href="#requestStatement"><li><div class="fthumb-icon"><img src="assets/images/app_images/alert.png"></div>Service Request</li> </a>
+				</ul>
+			</div>
+		</div> 
+	</footer>  
+  </div>
+
+  
+
+<!--Service Request page--> 
+
+<div data-role="page" data-dom-cache="true" id="service_enquiry" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+	  <div class="bgall d-flex align-items-center justify-content-between main_header bb1">
+		<div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn1" data-role="none"> <img src="assets/images/back_btn.png" class="img-responsive" alt=""> </a>
+		  <h3 class="header_title">Service Request</h3>
+		</div>
+		<!--<div class="header_right">
+			<a href="#notificationspg" class="notifiction_btn notification_active ui-link"><img src="assets/images/notification_icon.png" class="img-responsive" alt=""></a>
+		</div>-->
+	  </div>
+	  
+	</div>
+	<div data-role="content" class="ui-content p-0 d-flex align-items-start bg_white">
+	  <div class="w-100">
+		<div class="out_wrapper">
+			  <div class="inner_wrapper bg-white mt-20">
+				  <div class="ui-grid-solo" id="retchoice_emailstats_div">
+					<div class=" ">
+						<div class="custom-input ">
+						  <input type="text" id="enquiry_name" placeholder="Name*" class="form_de" data-role="none" />
+						</div>
+						<div class="custom-input ">
+							<input type="tel" id="enquiry_mobile" placeholder="Mobile Number*" class="form_de" data-role="none" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+						</div>
+						<div class="custom-input ">
+						  <input type="email" id="enquiry_email" placeholder="Email ID*" class="form_de" data-role="none" />
+						</div>
+						<div class="custom-input ">
+						  <input type="text" id="enquiry_txt" placeholder="Details" class="form_de" data-role="none" />
+						</div>
+						<div class="clear"></div>
+					  </div>
+				  </div>
+				  <div class="mt-10 mb-40">
+					  <a href="javascript:submitEnquiry();" class="btn btn_primary">Submit</a>
+				  </div>
+				 <br><br><br>
+			  </div>	
+		  </div>      
+		<div class="overlay"></div>
+	  </div>
+	</div>
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home</li></a>
+					<a href="#reward_pg"> <li><div class="fthumb-icon"><img src="assets/images/app_images/my-rewards.png"></div>My Rewards</li></a>
+					<a href="#addtransactions"> <li><div class=" fthumb-icon qr "><img src="assets/images/app_images/scan.png"></div>Add More Grow More</li></a>
+					 <a href="#profilepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/profile.png"></div>Profile</li></a>
+					 <a href="#service_enquiry"><li><div class="fthumb-icon"><img src="assets/images/app_images/alert.png"></div>Service Request</li> </a>
+				</ul>
+			</div>
+		</div> 
+	</footer>  
+  </div>
+  <!--page--> 
+
+  <div data-role="page" data-dom-cache="true" id="SiteRegistration" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+	  <div class="bgall d-flex align-items-center justify-content-between main_header bb1">
+		<div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn1" data-role="none"> <img src="assets/images/back_btn.png" class="img-responsive" alt=""> </a>
+		  <h3 class="header_title">Site Registration</h3>
+		</div>
+		<!--<div class="header_right">
+			<a href="#notificationspg" class="notifiction_btn notification_active ui-link"><img src="assets/images/notification_icon.png" class="img-responsive" alt=""></a>
+		</div>-->
+	  </div>
+	  
+	</div>
+	<div data-role="content" class="ui-content p-0 d-flex align-items-start bg_white">
+	  <div class="w-100">
+		<div class="out_wrapper">
+			  <div class="inner_wrapper bg-white mt-20">
+				
+				<h4 class="mb-10" style="font-weight: bold;">Personal Details </h4>
+				  <div class="ui-grid-solo" id="retchoice_emailstats_div">
+					
+
+					<div class=" ">
+					 
+						<div class="custom-input ">
+						  <input type="text" id="sreg_name" placeholder="Name*" class="form_de" data-role="none" />
+						</div>
+						<div class="custom-input ">
+							<input type="tel" id="sreg_mobile" placeholder="Mobile Number*" class="form_de" data-role="none" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+						  </div>
+						<div class="clear"></div>
+					  </div>
+				  </div>
+				  <h4 class="mb-10 mt-10" style="font-weight: bold;">Site Details
+				</h4>
+				  <div class="ui-grid-solo">
+					
+
+					<div class=" ">
+					 
+						<div class="custom-input ">
+						  <input type="text" id="sreg_address1" placeholder="Address/Plot No.*" class="form_de" data-role="none" />
+						</div>
+						<div class="custom-input ">
+							<input type="text" id="sreg_loc1" placeholder="Area/Location" class="form_de" data-role="none" >
+						</div>
+						<div class="custom-input ">
+							<input type="text" id="sreg_city" placeholder="City*" class="form_de" data-role="none" >
+						</div>
+						  <div class="custom-input">
+							<div class="select_role_block">
+								<select name="sreg_state" id="sreg_state" data-role="none" onchange="javascript:fetchDistrictlist_sreg();">
+								</select>
+							</div>
+						  </div>
+						  <div class="custom-input">
+							<div class="select_role_block">
+								<select name="sreg_dist" id="sreg_dist" data-role="none">
+								</select>
+							</div>
+						  </div>
+						  <!--<div class="custom-input ">
+							<div class="select_role_block">
+			
+								<select name="" id="Taluka" data-role="none">
+									<option>Taluka</option>
+									<option value="SH"> Taluka1   </option>
+									<option value="RRM"> Taluka 2</option>
+									 <option value="ARM"> Taluka3 </option>
+									 
+								</select>
+							</div>
+						  </div>-->
+						  
+						  <div class="custom-input ">
+							<input type="number" id="sreg_pincode" placeholder="Pincode" class="form_de" data-role="none" maxlength="6" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onblur="javascript:checkpin('sreg_pincode');" />
+						  </div>
+						<div class="clear"></div>
+					  </div>
+				  </div>
+				  
+				  <div class="mt-10 mb-40">
+					  <a href="javascript:site_Reg1();" class="btn btn_primary">Submit</a>
+				  </div>
+				 <br>	 <br>	 <br>
+			 
+			  </div>	
+		  </div>      
+		<div class="overlay"></div>
+	  </div>
+	</div>
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home</li></a>
+					<a href="#reward_pg"> <li><div class="fthumb-icon"><img src="assets/images/app_images/my-rewards.png"></div>My Rewards</li></a>
+					<a href="#addtransactions"> <li><div class=" fthumb-icon qr "><img src="assets/images/app_images/scan.png"></div>Add More Grow More</li></a>
+					 <a href="#profilepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/profile.png"></div>Profile</li></a>
+					 <a href="#service_enquiry"><li><div class="fthumb-icon"><img src="assets/images/app_images/alert.png"></div>Service Request</li> </a>
+				</ul>
+			</div>
+		</div> 
+	</footer>  
+  </div>
+
+<!--Site Registration page--> 
+
+<div data-role="page" data-dom-cache="true" id="MyQuotes" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+	  <div class="bgall d-flex align-items-center justify-content-between main_header bb1">
+		<div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn1" data-role="none"> <img src="assets/images/back_btn.png" class="img-responsive" alt=""> </a>
+		  <h3 class="header_title">My Quotes
+		</h3>
+		</div>
+		<div class="header_right">
+			<a href="#notificationspg" class="notifiction_btn notification_active ui-link"><img src="assets/images/notification_icon.png" class="img-responsive" alt=""></a>
+		</div>
+	  </div>
+	  
+	</div>
+	<div data-role="content" class="ui-content p-0 d-flex align-items-start bg_white">
+	  <div class="w-100">
+		<div class="out_wrapper">
+			  <div class="inner_wrapper bg-white mt-20">
+				
+				<h4 class="mb-10" style="font-weight: bold;">Personal Details </h4>
+				  <div class="ui-grid-solo" id="retchoice_emailstats_div">
+					
+
+					<div class=" ">
+					 
+						<div class="custom-input ">
+						  <input type="text" id="name_update_se" placeholder="Name" class="form_de" data-role="none" />
+						</div>
+						<div class="custom-input ">
+							<input type="number" id="number" placeholder="Mobile Number" class="form_de" data-role="none" >
+						  </div>
+						  </div>
+						 
+							 
+						  <div class="image-upload custom-input form_de">
+							<label for="file-input">
+								<img src="assets/images/attach.png" class="fthumb-icon attachedicon">  <p style="border: none;"> Number of PDF Conversions</p> 
+							</label>
+							<div>
+							<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset" style=" display: none;"><input id="file-input" type="file" style=" visibility: hidden; display: none;
+							user-select: none;" placeholder="number"></div>
+						</div>
+					</div>
+							 
+					<div class="image-upload custom-input form_de">
+						<label for="file-input">
+							<img src="assets/images/attach.png" class="fthumb-icon attachedicon">  <p style="border: none;"> Number of PDF Documents Shared </p> 
+						</label>
+						<div>
+						<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset" style=" display: none;"><input id="file-input" type="file" style=" visibility: hidden; display: none;
+						user-select: none;" placeholder="number"></div>
+					</div>
+				</div>
+						 
+						 
+						<div class="clear"></div>
+					  </div>  <div class="mt-10 mb-40">
+						<a href="#" class="btn btn_primary">Submit</a>
+					</div>
+				  </div>
+				   
+				 
+				  
+				
+				 <br>	 <br>	 <br>
+			 
+			  </div>	
+		  </div>      
+		<div class="overlay"></div>
+	  </div>
+	  <footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home</li>
+					<li><div class="fthumb-icon"><img src="assets/images/app_images/my-rewards.png"></div>My Rewards</li>
+					<li><div class=" fthumb-icon qr "><img src="assets/images/app_images/scan.png"></div>Add More
+						Grow More</li>
+					<li><div class="fthumb-icon"><img src="assets/images/app_images/profile.png"></div>Profile</li>
+					<li><div class="fthumb-icon"><img src="assets/images/app_images/alert.png"></div>Service
+						Request</li> 
+				</ul>
+			</div>
+		</div> 
+	</footer> 
+	</div>
+	 
+  <!--page-->
+
+
+  <!-- Terms & Conditions -->
+
+  <div data-role="page" data-dom-cache="true" id="tnc" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">Terms & Conditions</h3>
+		  </div>
+		  <div class="header_right">
+			<div class="header_right_icons">
+			   <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+				</div>
+		  </div>
+		</div>
+	  </div>
+	<div data-role="content" class="ui-content p-0 d-flex align-items-start bg_white">
+	  <div class="w-100">
+		<div class="out_wrapper">
+			  <div class="inner_wrapper bg-white p-0">
+				  <div class="unclear_transactions  " style="margin-left: 20px;">
+					  
+					  
+					  <div class="unclear_transaction_inner   pl-5 pr-4">
+						  <ol class="tc">
+							
+					 <li> Lorem ipsum dolor sit amet, consectetur adipiscing elit.	</li>
+
+					 <li> Nunc congue ligula cursus, maximus nisl a, tempor nisl.	</li>
+
+					  <li> Vestibulum pellentesque arcu quis mauris scelerisque gravida.	</li>
+
+			 <li>Quisque eu sem ac nisl egestas ornare.	</li>
+
+			 <li> Aenean a quam nec risus molestie gravida.	</li>
+
+				 <li> Quisque pellentesque diam sit amet augue lacinia tempus.	</li>
+
+			 <li> Aenean condimentum lorem non risus gravida convallis.	</li>
+
+					 <li> Praesent sit amet tortor rhoncus, imperdiet sem in, posuere elit.
+					</li>
+					 <li> Suspendisse dignissim nibh eget leo maximus, quis ullamcorper nulla vestibulum.	</li>
+
+							 <li> Pellentesque et risus porttitor, venenatis dui eget, convallis tortor.	</li>
+ <li> Morbi placerat metus sit amet egestas feugiat.	</li>
+ <li> Aliquam semper mi quis scelerisque lacinia.	</li>
+
+									 <li> Curabitur aliquam magna in sagittis ultricies.
+							</li>
+						  </ol>
+					  </div>
+  
+					  </div>
+			  </div>	
+		  </div>      
+	 
+	  </div>
+	</div>
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home</li></a>
+					<a href="#reward_pg"> <li><div class="fthumb-icon"><img src="assets/images/app_images/my-rewards.png"></div>My Rewards</li></a>
+					<a href="#dream-gift"> <li><div class=" fthumb-icon qr "><img src="assets/images/app_images/scan.png"></div>Add More Grow More</li></a>
+					 <a href="#profilepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/profile.png"></div>Profile</li></a>
+					 <a href="#requestStatement"><li><div class="fthumb-icon"><img src="assets/images/app_images/alert.png"></div>Service Request</li> </a>
+				</ul>
+			</div>
+		</div> 
+	</footer>
+  </div>
+  <!-- Terms & Conditions -->
+
+  <!-- Disclaimer -->
+
+  <div data-role="page" data-dom-cache="true" id="Disclaimer" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">Disclaimer</h3>
+		  </div>
+		  <div class="header_right">
+			<div class="header_right_icons">
+			   <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+				</div>
+		  </div>
+		</div>
+	  </div>
+	<div data-role="content" class="ui-content p-0 d-flex align-items-start bg_white">
+	  <div class="w-100">
+		<div class="out_wrapper">
+			  <div class="inner_wrapper bg-white p-0">
+				  <div class="unclear_transactions  " >
+					  
+					  
+					  <div class="unclear_transaction_inner   pl-5 pr-4">
+						  <p class="Disclaimer">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Nunc congue ligula cursus, maximus nisl a, tempor nisl.
+							Vestibulum pellentesque arcu quis mauris scelerisque gravida.
+							Quisque eu sem ac nisl egestas ornare.
+							Aenean a quam nec risus molestie gravida.
+							Quisque pellentesque diam sit amet augue lacinia tempus.
+							Aenean condimentum lorem non risus gravida convallis.
+							Praesent sit amet tortor rhoncus, imperdiet sem in, posuere elit.
+							Suspendisse dignissim nibh eget leo maximus, quis ullamcorper nulla vestibulum.
+							Pellentesque et risus porttitor, venenatis dui eget, convallis tortor.
+							Morbi placerat metus sit amet egestas feugiat.
+							Aliquam semper mi quis scelerisque lacinia.
+							Curabitur aliquam magna in sagittis ultricies.	
+					 
+						  </p>
+						  <p class="Disclaimer">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Nunc congue ligula cursus, maximus nisl a, tempor nisl.
+							Vestibulum pellentesque arcu quis mauris scelerisque gravida.
+							Quisque eu sem ac nisl egestas ornare.
+							Aenean a quam nec risus molestie gravida.
+							Quisque pellentesque diam sit amet augue lacinia tempus.
+							Aenean condimentum lorem non risus gravida convallis.
+							Praesent sit amet tortor rhoncus, imperdiet sem in, posuere elit.
+							Suspendisse dignissim nibh eget leo maximus, quis ullamcorper nulla vestibulum.
+							Pellentesque et risus porttitor, venenatis dui eget, convallis tortor.
+							Morbi placerat metus sit amet egestas feugiat.
+							Aliquam semper mi quis scelerisque lacinia.
+							Curabitur aliquam magna in sagittis ultricies.	
+					 
+						  </p>
+						  <p class="Disclaimer">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Nunc congue ligula cursus, maximus nisl a, tempor nisl.
+							Vestibulum pellentesque arcu quis mauris scelerisque gravida.
+							Quisque eu sem ac nisl egestas ornare.
+							Aenean a quam nec risus molestie gravida.
+							Quisque pellentesque diam sit amet augue lacinia tempus.
+							Aenean condimentum lorem non risus gravida convallis.
+							Praesent sit amet tortor rhoncus, imperdiet sem in, posuere elit.
+							Suspendisse dignissim nibh eget leo maximus, quis ullamcorper nulla vestibulum.
+							Pellentesque et risus porttitor, venenatis dui eget, convallis tortor.
+							Morbi placerat metus sit amet egestas feugiat.
+							Aliquam semper mi quis scelerisque lacinia.
+							Curabitur aliquam magna in sagittis ultricies.	
+					 
+						  </p>
+					  </div>
+  
+					  </div>
+			  </div>	
+		  </div>      
+	 
+	  </div>
+	</div>
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home</li></a>
+					<a href="#reward_pg"> <li><div class="fthumb-icon"><img src="assets/images/app_images/my-rewards.png"></div>My Rewards</li></a>
+					<a href="#addtransactions"> <li><div class=" fthumb-icon qr "><img src="assets/images/app_images/scan.png"></div>Add More Grow More</li></a>
+					 <a href="#profilepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/profile.png"></div>Profile</li></a>
+					 <a href="#requestStatement"><li><div class="fthumb-icon"><img src="assets/images/app_images/alert.png"></div>Service Request</li> </a>
+				</ul>
+			</div>
+		</div> 
+	</footer> 
+  </div>
+  <!--Disclaimer -->
+
+  
+<!-- Attot Contact Page-->
+
+
+<div data-role="page" data-dom-cache="true" id="contact" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+	  <div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		<div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+		  <h3 class="main_title">Contact</h3>
+		</div>
+		<div class="header_right">
+		  <!-- <div class="header_right_icons">
+		  			 <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+		  </div> -->
+		</div>
+	  </div>
+	</div>
+	<div class="contact-sec">
+		<p>Helpline Email Id</p>
+		<div class="contact-item">
+			<img src="assets/images/inbox-icon.png" class="img-responsive" alt="">
+			<div><a href="mailTo:acchelp@acclimited.com">acchelp@acclimited.com</a></div>
+		</div>
+	</div>
+	<div class="contact-sec">
+		<p>Customer Support Number</p>
+		<div class="contact-item">
+			<img src="assets/images/phone-icon.png" class="img-responsive" alt="">
+			<div><a href="tel:18001033444">1800-103-3444</a></div>
+		</div>
+	</div>
+	<div class="contact-sec">
+		<p>Website</p>
+		<div class="contact-item">
+			<img src="assets/images/globe-icon.png" class="img-responsive" alt="">
+			<div><a href="http://www.acchelp.in/" target="_blank">www.acchelp.in</a></div>
+		</div>
+	</div>
+
+	<div class="corporate">
+		<div class="corporate-add">
+			<p class="cor">
+				Corporate Office
+			</p>
+			<p>
+	<b>Cement House</b>		 <br>
+121, Maharshi Karve Road Mumbai - <br>
+400 020, India	</p>
+<div class="contact-item">
+<img src="assets/images/phone-icon.png" class="img-responsive" alt="" style="width:18px"><p style="line-height:1 ;"> +91-22-41593 321 / 6665432</p>
+		
+		</div>
+	</div>
+	<!--Footer-->
+	</div>
+
+	<footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<!-- <a href="#se_leads"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a>
+					<a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a> -->
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer>
+  </div>
+
+  <!--Page end-->
+
+
+
+<!--Products Catalogue page-->
+
+
+ <div data-role="page" data-dom-cache="true" id="ProductsCatalogue" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="bgall d-flex align-items-center justify-content-between main_header bb1">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn1" data-role="none"> <img src="assets/images/back_btn.png" class="img-responsive" alt=""> </a>
+			<h3 class="header_title">Products Catalogue </h3>
+		  </div>
+		  <div class="header_right">
+			<a href="#notificationspg" class="notifiction_btn notification_active ui-link"><img src="assets/images/notification_icon.png" class="img-responsive" alt=""></a>
+		</div>
+		</div>
+	  </div>
+	  <div class="inner_wrapper bg-white p-0 search-sec">
+		<div class="search">
+			<div class="search-1">
+			<div class="serch-icon">
+				<!-- <img src="assets/images/rewards/magnifine.png" class="img-responsive" alt=""> -->
+			</div>
+			<p class="search-content">
+				Search Product Category
+				 
+			</p>
+		</div>
+			<div class="filter-icon">
+				<!-- <img src="assets/images/rewards/filter.png" class="img-responsive" alt=""> -->
+			</div>
+		</div>
+		</div>
+	<div class="d-flex flex-wrap align-items-center justify-content-between search-sec1">
+		<div class="mt-20 mb-10 rewards-items">
+	 
+		 
+		<!-- <div class="dine-reward-back">
+			<img style="width: 100%;"src="./assets/images/rewards/dine-reward-1.png" alt="">
+			 
+		 
+		</div> -->
+	 
+		 
+		 
+		 
+		 
+			<!-- <div class="dine-reward-back">
+				<img style="width: 100%;"src="./assets/images/rewards/dine-reward-2.png" alt="">
+				 
+				 
+			</div> -->
+	 
+
+
+	   </div>
+ </div>
+ 
+	
+	
+	 
+ <footer>
+	<div class="d-flex align-items-center justify-content-center flex-wrap">
+		<div class="foot_menu">
+			<ul>
+				<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home</li></a>
+				<a href="#reward_pg"> <li><div class="fthumb-icon"><img src="assets/images/app_images/my-rewards.png"></div>My Rewards</li></a>
+				<a href="#addtransactions"> <li><div class=" fthumb-icon qr "><img src="assets/images/app_images/scan.png"></div>Add More Grow More</li></a>
+				 <a href="#profilepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/profile.png"></div>Profile</li></a>
+				 <a href="#requestStatement"><li><div class="fthumb-icon"><img src="assets/images/app_images/alert.png"></div>Service Request</li> </a>
+			</ul>
+		</div>
+	</div> 
+</footer>
+  </div>
+
+
+  <!--Page end-->
+
+
+  <!-- Enroled Contractor -->
+  <div data-role="page" data-dom-cache="true" id="enroleContractor" class="login_bg full_height">
+	<div class="all_size sidemenu_header">
+		<a href="#my_profile" class="profile_header_inner ui-link">
+			<div class="">
+				<div class="profile_pic profile_pic_sidemenu"
+					style="width: 100%;height: 100%;top: 23px;margin: 0 auto;border: solid 2px;">
+					<img src="assets/images/user_pic.png" id="update_photo"
+						onclick="javascript:capturePhoto_profile();" class="img-responsive"
+						style="height: 100px; width: 100px;" alt=""
+						onerror="this.src='assets/images/user_pic.png';">
+				</div>
+			</div>
+		</a>
+	</div>
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">Enroll Contractor</h3>
+		  </div>
+		  <!--<div class="header_right">
+			<div class="header_right_icons">
+			   <img src="assets/images/bell.png" class="img-responsive" alt="" style="width: 30%; float: right;">
+				</div>
+		  </div>-->
+		</div>
+	  </div>
+	<div class="all_size loginreg" style="margin-bottom: 75px;">
+		<div class="loginreg_inner mb-10 mt-10">
+			<div class="form-group">
+				<label class="form_label">First Name (English Only):<span style="color: red;">*</span></label>
+				<div class="">
+					<input type="text" id="update_firstname_de" oninput="testFirstName()"  name="update_firstname_de" placeholder="First Name"
+						class="form-input update_firstname_de" data-role="none" />
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="form-group">
+				<label class="form_label">Last Name:</label>
+				<div class="">
+					<input type="text" id="update_lastname_de" placeholder="Last Name" class="form-input update_firstname_de"
+						data-role="none" />
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="form-group">
+				<label class="form_label">Mobile number:<span style="color: red;">*</span></label>
+				<div class="">
+					<input type="number" id="update_mobile_de" placeholder="Aadhar Linked Mobile number" maxlength="10" class="form-input" data-role="none"
+						oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<!-- <div class="form-group">
+				<label class="form_label">Alternate Mobile:</label>
+				<div class="custom-input">
+					<input type="text" id="update_mobile2_de" placeholder="Alternate Mobile" maxlength="10"
+						class="form-input" data-role="none"
+						oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+				</div>
+				<div class="clear"></div>
+			</div> -->
+
+			<div class="form-group">
+				<label class="form_label">Date of Birth:<span style="color: red;">*</span></label>
+				<div class="">
+					<input type="date" id="update_dob_de" class="form-input" data-role="none"
+						onblur="javascript:isDate18orMoreYears('update_dob_de');" />
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<label class="form_label">Gender:<span style="color: red;">*</span></label>
+			<div class="d-flex">
+				<div class="padding0_10px">
+					<label class="mb-0 custom_check">
+						<input type="radio" name="update_gender_de" id="update_gender_male_de" data-role="none"
+							value="Male" data-cacheval="false" checked /> <span
+							class="custom_radio"></span>Male</label>
+				</div>
+				<div class="padding0_10px">
+					<label class="mb-0 custom_check">
+						<input type="radio" name="update_gender_de" id="update_gender_female_de" data-role="none"
+							value="Female" data-cacheval="false" /> <span class="custom_radio"></span>Female</label>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+			<div id="kyc_div">
+				<div class="kyc_header">Document:</div>
+				<div class="form-group">
+
+					<div class="select_role_block">
+						<select name="update_kyc_doc_type_de" id="update_kyc_doc_type_de" data-role="none" >
+							<option disabled="disabled" selected="selected">Select Doc Type</option>
+							<option value="pancard" >Pan Card</option>
+							<option value="aadharcard" >Aadhar Card</option>
+							<!-- <option value="drivinglicense">Driving License</option> -->
+						</select>
+					</div><br>
+
+					<div class="form-group">
+						<label class="form_label">Document ID No:<span style="color: red;">*</span></label>
+						<div class="">
+							<input type="text" id="update_doc_number_de" placeholder="Document ID No" class="form-input"
+								data-role="none"  maxlength="12"
+								oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  onblur="checkKycDoc()" style="text-transform:uppercase" />
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+
+				<!-- <div id="update_kyc_type_doc">
+					<div class="form-group">
+						<form id="form" action="https://taghash.co/Atoot-Bandhan-Dealer/upload.php" method="post" enctype="multipart/form-data">
+						<label class="form_label">Document Photo:</label>
+						<input type="hidden" class="form-control" id="name" name="name" placeholder="Enter name" required />
+						<input id="uploadImage" type="file" accept="image/*" name="image" />
+						<div id="preview"><img src="assets/images/camera.png"  style="height: 50px;"/></div><br>
+						<input class="btn btn-success" type="button" onclick="restrictuploadfile()" value="Upload">
+						<div class="clear"></div>
+						</form>
+					</div>
+				</div> -->
+				<div id="preview"><img src="assets/images/camera.png"  id="kyc_doc_photo" style="height: 50px;" onclick="javascript:uploadPhoto_doc_option();" /></div><br>
+			</div>
+			<!-- <video id="video" width="320" height="240" autoplay style="display:none;"></video>
+			<button id="click-photo" onclick="javascript:capturePic();" style="display:none;">Click Photo</button>
+			<canvas id="canvas" width="320" height="240" style="display:none;"></canvas> -->
+
+			<div class="form-group">
+				<label class="form_label">Address:</label>
+				<div class="">
+					<input type="text" id="update_address_de" name="update_address_de" placeholder="Address"
+						class="form-input" data-role="none" />
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<!-- <div class="ui-grid-solo form-group">
+				<label class="form_label">State:<span style="color: red;">*</span></label>
+				<div class="ui-block-a">
+					<div class="">
+						<select name="update_state_de" onchange="javascript:fetchDistrictlist_sreg('update_state_de','update_district_de');"
+							id="update_state_de" data-role="none" class="form-control">
+						</select>
+					</div>
+				</div>
+			</div -->
+
+			<div class="ui-grid-solo form-group" style="display: none;">
+				<label class="form_label">District:<span style="color: red;">*</span></label>
+				<div class="ui-block-a">
+					<div class="">
+						<select name="update_district_de" onchange="javascript:showDistrictCityList('update_district_de','update_city_de');"
+							id="update_district_de" data-role="none" class="form-control">
+							<option value="" disabled="disabled" style="background-color:#3E3E3E"
+								selected="selected">-Select District-</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="ui-grid-solo form-group" style="display: none;">
+				<label class="form_label">City:<span style="color: red;">*</span></label>
+				<div class="ui-block-a">
+					<div class="">
+						<select name="update_city_de" id="update_city_de" data-role="none" class="form-control" onchange="javascript:showCityDealerList('update_city_de');">
+							<option value="" disabled="disabled" style="background-color:#3E3E3E"
+								selected="selected">-Select City-</option>
+						</select>
+					</div>
+				</div>
+			</div> 
+
+			<div class="ui-grid-solo form-group" style="display: none;">
+				<label class="form_label">Dealer:<span style="color: red;">*</span></label>
+				<!-- <div class="ui-block-a">
+					<div class="">
+						<select name="update_select_dealer" id="update_select_dealer" data-role="none" class="form-control">
+							<option value="" disabled="disabled" style="background-color:#3E3E3E" selected="selected">Select Dealer</option>
+						</select>
+					</div>
+				</div>onblur="javascript:showCityDealerList('update_select_dealer_name');" -->
+			</div>
+
+			
+			<div class=" form-group mt-10"  >	
+				<label class="form_label ">Search Dealer<span style="color: red;">*</span></label>
+				  <div class="d-flex">
+				     <div class="custom-input" style="width: 80% !important;" >
+					    <input type="text" id="update_select_dealer_name" name="update_select_dealer_name" placeholder="Enter Name" class="form-input" data-role="none" maxlength="50" />
+				     </div>
+				     <div class="clear"></div>
+			         <div>
+			           <img src="assets/images/app_images/magnifine.png" onclick="javascript:showCityDealerList('update_select_dealer_name');" style="height: 30px; margin-left: 20px; margin-top: 5px;" />
+			         </div>
+		          </div>
+		    </div>
+
+			<input type="hidden" id="update_select_dealer" />
+			<input type="hidden" id="tx_smobile" />
+
+			<div>
+				<div class="csoscrole">
+					<p style="height:250%; padding-left: 2px; width: 70%;"  id="searchlist_div">
+				</div>
+				<div class="clear"></div>
+			</div><br>
+
+
+
+			<div class="form-group">
+				<label class="form_label">Running Sites:<span style="color: red;">*</span></label>
+				<div class="">
+					<input type="number" id="update_runningsite_count"  min="1" max="99" maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="update_runningsite_count" placeholder="Running Sites"
+						class="form-input" data-role="none" />
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<br>
+			<label style="font-size: 11px;"><h5>Please Add Detail For two Running Site</h5></label>
+			<div class="form-group" id="update_runningsite_div1">
+				<div class="custom-input" style="border: 1px solid #b8b8b8;">
+					<label class="form_label">Site 1<span style="color: red;">*</span></label>
+					<input type="number" id="update_rcount_ihbmobile1" name="update_rcount_ihbmobile1"
+						placeholder="Home Owner Mobile No." class="form-input" data-role="none" maxlength="10"
+						oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+					<hr class="hr">
+					<input type="text" id="update_rcount_ihbname1" name="update_rcount_ihbname1"
+						placeholder="Home Owner Name" class="form-input" data-role="none" />
+					<hr class="hr">
+						<label style="font-size: 11px;">Contract Type*</label>
+						<div class="">
+							<div class="select_role_block">
+								<select name="update_rcount_matrialstatus1" id="update_rcount_matrialstatus1" data-role="none">
+									<option value="" disabled="disabled" selected="selected">Select Contract Type </option>
+									<option value="Labour">Labour</option>
+									<option value="With Material">With Material</option>
+								</select>
+							</div>
+						</div>		
+					
+					<button class="addconbtn" id="update_rcount_ihbmobile1_button"
+						onclick="javascript:site_Reg('update_rcount_ihbname1','update_rcount_ihbmobile1','update_rcount_ihbmobile1_button','update_rcount_matrialstatus1');"
+						data-role="none">add</button>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="form-group" id="update_runningsite_div2">
+				<div class="custom-input" style="border: 1px solid #b8b8b8;">
+					<label class="form_label">Site 2<span style="color: red;">*</span></label>
+					<input type="number" id="update_rcount_ihbmobile2" name="update_rcount_ihbmobile2"
+						placeholder="Home Owner Mobile No." class="form-input" data-role="none" maxlength="10"
+						oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+					<hr class="hr">
+					<input type="text" id="update_rcount_ihbname2" name="update_rcount_ihbname2"
+						placeholder="Home Owner Name" class="form-input" data-role="none" />
+						<hr class="hr">	
+						<label style="font-size: 11px;">Contract Type*</label>
+						<div class="">
+							<div class="select_role_block">
+								<select name="update_rcount_matrialstatus2" id="update_rcount_matrialstatus2" data-role="none">
+									<option value="" disabled="disabled" selected="selected">Select Contract Type </option>
+									<option value="Labour">Labour</option>
+									<option value="With Material">With Material</option>
+									</select>
+							</div>
+						</div>		
+					
+					<button class="addconbtn" id="update_rcount_ihbmobile2_button"
+						onclick="javascript:site_Reg('update_rcount_ihbname2','update_rcount_ihbmobile2','update_rcount_ihbmobile2_button','update_rcount_matrialstatus2');"
+						data-role="none">add</button>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<br>
+			<div class="form-group"> 
+				<button onclick="javascript:EnroledContractor();" id="create_new_contractore" class="btn btn_primary submit_btn ui-link">SUBMIT</button>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="overlay"></div>
+	</div>
+
+	<div class="overlay"></div>
+ 
+</div>
+
+<!--Home Page-->
+<div data-role="page" data-dom-cache="true" id="homepage" class="full_height bg_img" style="background-color:#fff ;">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false" data-hide-during-focus="false">
+	  <div class="d-flex align-items-center justify-content-between main_header bg_img  ">
+		<div class="d-flex align-items-center justify-content-start">
+		  <a href="#" class="user_profile"> <div class="user_pic"> <span id="sortname">G</span> </div> </a>  
+		  <a href="#sidebar" class="sidemenu_btn" data-role="none"> <img src="assets/images/menu_icon.png" class="img-responsive" alt=""> </a>
+	   </div>
+	   <div class="d-flex align-items-center justify-content-start">
+		  <a href="#" class="user_profile-logo"> <img src="./assets/images/app_images/logo4.png" class="img-responsive"> </a>
+	   </div>
+	   <div class="d-flex align-items-center justify-content-start">
+	   </div>
+	  </div>
+	</div>
+	<div class="">
+			   
+	  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators carousel-indicatorsab">
+		  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		  <li data-target="#myCarousel" data-slide-to="1"></li>
+		  <li data-target="#myCarousel" data-slide-to="2"></li>
+		
+		</ol>
+	
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner ">	
+		  <div class="item active">
+			<img src="./assets/images/app_images/banner.jpg" alt="" style="width:100%; height: 250px;">
+		  </div>
+    
+		  <div class="item">
+			<img src="./assets/images/app_images/banner.jpg" alt="Chicago" style="width:100%; height: 250px;">
+		  </div>
+		
+		  <div class="item">
+			<img src="./assets/images/app_images/banner.jpg" alt="New york" style="width:100%; height: 250px;">
+		  </div>
+		  
+		</div>
+	
+		<!-- Left and right controls -->
+		 
+	  </div>
+	</div>
+	<div data-role="content" class="ui-content p-0 d-flex align-items-start inner_content">
+	  <div class="out_wrapper1">
+		  <div class="card-line">
+			<img src="./assets/images/app_images/card-line.png" alt="">
+		  </div>			
+			
+		<div class="inner_wrapper2">
+			<div class="mt-0 mb-30 icons-sec">
+				<!-- <div class="service-icons" onclick="javascript:getPending_members_byse();">
+					<img src="assets/images/app_images/member_approve.png" alt="">
+					<p>Approve<br> Member</p>
+				</div> -->
+				<div class="service-icons" onclick="javascript:gotoConstEnrole();">
+					<img src="assets/images/app_images/enroll.png" alt="">
+					<p>Enroll<br> Contractor</p>
+				</div>
+				<div class="service-icons" onclick="javascript:getPending_sites_byse();"  >
+				  <a href="#notificationspg" class="notification_active ui-link" id="sitenotification_count_div" data-value="0"><img src="assets/images/app_images/design1.png" class="img-responsive" alt="" id="sitenotification"></a>  
+				  <p>Approve<br> Sites </p>
+				</div>
+
+				<!-- <div class="service-icons" onclick="javascript:getPending_sites_byse();"  >
+					<img src="assets/images/app_images/design1.png" alt="" id="sitenotification">
+					<p>Approve<br> Sites </p>
+				</div> -->
+
+				<div class="service-icons" onclick="javascript:getPending_txns_byse();"  >
+					<a href="#notificationspg" class="notification_active1 ui-link" id="transnotification_count_div" data-value="0"><img src="assets/images/app_images/member_approve2.png" class="img-responsive" alt="" id="transnotification"> </a>  
+					<p>Approve<br> Transactions </p>
+				  </div>
+				<!-- <div class="service-icons" onclick="javascript:getPending_txns_byse();" id="transnotification"> 
+					<img src="assets/images/app_images/member_approve2.png" alt="">
+					<p>Approve Transactions</p>
+				</div> -->
+				
+				<div class="service-icons" onclick="javascript:viewContractors();">
+					<img src="assets/images/app_images/ViewMember.png" alt="">
+					<p>View<br> Contractor</p>
+				</div>			
+				<div class="service-icons" onclick="javascript:viewSites();">
+					<img src="assets/images/app_images/design.png" alt="">
+					<p>View<br> Site</p>
+				</div>
+				<div class="service-icons" onclick="javascript:viewTransactions();">
+					<img src="assets/images/app_images/buget.png" alt="">
+					<p>View<br> Transactions</p>
+				</div>
+				<div class="service-icons" onclick="javascript:viewService();">
+					<img src="assets/images/app_images/service.png" alt="">
+					<p>View<br> Service</p>
+				</div>
+			</div>
+  
+			
+	  <h3 class="mt-30 pro_cat_txt">Bandhan</h3>
+	  <div class="sale" style="margin-top: 10px;">
+	  <img src="assets/images/bandhan.png"  style="border-radius: 10px;" onclick="javascript:openpdf('https://taghash.co/accpd/BandhanDetailer-Central.pdf')"  alt="">
+      </div>  
+
+	  <div class="mt-30 mb-80">
+		<h3 class="pro_cat_txt">Product Detailer</h3>
+		<div class="d-flex flex-wrap align-items-center justify-content-between">
+			<div id="ProductCat" class="owl-carousel owl-theme">
+				<!-- <div class="item">
+					<a class="thumb-product_PC ui-link">
+						<div class="thumb_icon test">
+							<div class="product_text">HPC </div>
+							<img onclick="javascript:openpdf('https://taghash.co/accpd/HPC AD BAG.pdf')" src="assets/images/products/HPC.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div> -->
+
+				<div class="item">
+					<a class="thumb-product_PC ui-link ">
+						<div class="thumb_icon test">
+							<div class="product_text">SURAKSHA Power Plus</div>
+							<img onclick="javascript:openpdf('https://taghash.co/accpd/SURAKSHA Power Plus.pdf');" src="assets/images/products/SURAKSHAPowerPlus.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a class="thumb-product_PC ui-link">
+						<div class="thumb_icon test">
+							<div class="product_text">SURAKSHA Power</div>
+							<img  onclick="javascript:openpdf('https://taghash.co/accpd/SURAKSHA Power.pdf')" src="assets/images/products/SURAKSHAPower.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a class="thumb-product_PC ui-link">
+						<div class="thumb_icon test">
+							<div class="product_text">Concrete plus</div>
+							<img onclick="javascript:openpdf('https://taghash.co/accpd/Concrete plus xtra strong.pdf')" src="assets/images/products/concreteplus.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a class="thumb-product_PC ui-link">
+						<div class="thumb_icon test">
+							<div class="product_text">F2R </div>
+							<img onclick="javascript:openpdf('https://taghash.co/accpd/F2R SuperFast.pdf')" src="assets/images/products/F2RSuperFast.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a class="thumb-product_PC ui-link">
+						<div class="thumb_icon test">
+							<div class="product_text">Gold Water Shield</div>
+							<img onclick="javascript:openpdf('https://taghash.co/accpd/Gold Water Shield.pdf')" src="assets/images/products/GoldWaterShield.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+				
+				<div class="item">
+					<a class="thumb-product_PC ui-link ">
+						<div class="thumb_icon test">
+							<div class="product_text">LB-202</div>
+							<img  onclick="javascript:openpdf('https://taghash.co/accpd/ACC LeakBlock Cement Mix LB-202.pdf');" src="assets/images/products/LB-202.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a class="thumb-product_PC ui-link ">
+						<div class="thumb_icon test">
+							<div class="product_text">LB-303</div>
+							  <img  onclick="javascript:openpdf('https://taghash.co/accpd/ACC LeakBlock Cement Mix LB-303.pdf')" src="assets/images/products/LB-303.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a class="thumb-product_PC ui-link ">
+						<div class="thumb_icon test">
+							<div class="product_text">XT 444</div>
+							<img onclick="javascript:openpdf('https://taghash.co/accpd/ACC  Xtra Premium White Adhesive -XT 444.pdf')" src="assets/images/products/XT444.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+		
+				<div class="item">
+					<a class="thumb-product_PC ui-link ">
+						<div class="thumb_icon test">
+							<div class="product_text">XT 333</div>
+							<img onclick="javascript:openpdf('https://taghash.co/accpd/ACC  Xtra Strong Tile Adhesive -XT 333.pdf');" src="assets/images/products/XT333.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+				
+				<div class="item">
+					<a class="thumb-product_PC ui-link ">
+						<div class="thumb_icon test">
+							<div class="product_text">XT 222</div>
+							<img onclick="javascript:openpdf('https://taghash.co/accpd/ACC  Xtra Strong Tile Adhesive -XT 222.pdf')" src="assets/images/products/XT222.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a class="thumb-product_PC ui-link ">
+						<div class="thumb_icon test">
+							<div class="product_text">XT 111</div>
+							<img onclick="javascript:openpdf('https://taghash.co/accpd/ACC Xtra Strong Tile Adhesive -XT 111.pdf')" src="assets/images/products/XT111.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+
+				<div class="item">
+					<a class="thumb-product_PC ui-link ">
+						<div class="thumb_icon test">
+							<div class="product_text">LB 101</div>
+							<img onclick="javascript:openpdf('https://taghash.co/accpd/ACC LeakBlock Waterproof Plaster - LB 101.pdf')" src="assets/images/products/LB101.png" alt="" class="image34 image">
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	  
+	  <footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<!-- <a href="javascript:getPending_sites_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a>
+					<a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a> -->
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer> 
+	  </div>
+	  <div class="overlay"></div>
+	</div>
+
+
+  <div data-role="panel" id="sidebar" data-display="overlay" data-overlay-theme="a">
+    <div class="sidemenu_header">
+      <a href="#" class="profile_header_inner">
+        <div class="">
+			<div>
+          <div class="profile_pic-new profile_pic_sidemenu-new">
+			 <img src="assets/images/user_pic.png" id="update_photo" onclick="javascript:capturePhoto_profile();" class="img-responsive" alt="" onerror="this.src='assets/images/user_pic.png';" />
+			</div>
+			<!-- <p class="user_id font_sm">&nbsp;My Location</p> -->
+			</div>
+          <div class="profile_content">
+            <h4 id="user_name_se1">Guest</h4>
+			<p class="user_id font_sm" id="user_id1_se"></p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="side_navs">
+      <ul>
+        <li><a href="javascript:gotoConstEnrole();" ><img src="./assets/images/app_images/enroll.png" class="img-responsive"> <span>Enroll Contractor</span> </a></li>
+        <li><a href="javascript:getPending_txns_byse();" ><img src="./assets/images/app_images/member_approve2.png" class="img-responsive"> <span>Approve Transactions</span> </a></li>
+		<li><a href="javascript:getPending_sites_byse();" ><img src="./assets/images/app_images/design1.png" class="img-responsive"> <span>Approve Sites</span> </a></li>
+		<li><a href="javascript:viewContractors();" ><img src="./assets/images/app_images/ViewMember.png" class="img-responsive"> <span>View Contractor</span> </a></li>
+		<li><a href="javascript:viewTransactions();" ><img src="./assets/images/app_images/buget.png" class="img-responsive"> <span>View Transactions</span> </a></li>
+		<li><a href="javascript:viewSites();" ><img src="./assets/images/app_images/design.png" class="img-responsive"> <span>View Site</span> </a></li>
+      </ul>
+	  <div class="side_navs1">
+	  <ul>
+        <li> <a href="javascript:logoutApp();"><img src="./assets/images/app_images/menu_icon.png" class="img-responsive"> <span>Logout</span> </a> </li>
+      </ul></div>
+    </div>
+  </div>
+
+  <div data-role="popup" id="optionspop_profile" data-theme="a" data-transition="pop" data-overlay-theme="b">
+	<div class="floors">
+	  <div class="flr2" id="tap_options2">
+		   <ul>
+				 <li><a href="javascript:capturePhoto4();">From Camera</a></li>
+				 <li><a href="javascript:capturePhoto4_gallery();">From Gallery</a></li>
+		   </ul>
+	  </div>
+	</div>
+  </div>
+
+  <div data-role="footer" data-position="fixed" data-tap-toggle="false" class="footer bg_none border_none" data-hide-during-focus="true">
+    <div class="footer_lines w-100"></div>
+  </div>
+</div>
+
+</div>
+
+
+<!--page-->
+  <div data-role="page" data-dom-cache="true" id="profilepage_byse" class="full_height bg_white">
+	<div data-role="header" class="inner_header" data-position="fixed" data-tap-toggle="false">
+		<div class="d-flex align-items-center justify-content-between main_header grey-bg">
+		  <div class="d-flex align-items-center justify-content-start"> <a href="#" data-rel="back" class="sidemenu_btn2" data-role="none"> <img src="assets/images/back.png" class="img-responsive" alt=""> </a>
+			<h3 class="main_title">Profile</h3>
+		  </div>
+		</div>
+	 </div>
+  <div data-role="content" class="ui-content p-20 align-items-start bg_white">
+        <div class="loginreg_inner">
+		
+        <div class="form-group">
+          <label class="form_label">First Name<span style="color: red;">*</span></label>
+          <div class="custom-input">
+            <input type="text" id="update_firstname_byse" placeholder="First Name" class="form-input" data-role="none" />
+          </div>
+          <div class="clear"></div>
+        </div>
+		<div class="form-group">
+          <label class="form_label">Last Name</label>
+          <div class="custom-input">
+            <input type="text" id="update_lastname_byse" placeholder="Last Name" class="form-input" data-role="none" />
+          </div>
+          <div class="clear"></div>
+        </div>
+		<div class="form-group">
+          <label class="form_label">Primary Mobile No<span style="color: red;">*</span></label>
+          <div class="custom-input">
+            <input type="number" id="update_mobile_byse" placeholder="Primary Mobile No" class="form-input" data-role="none"  maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" readonly />
+          </div>
+          <div class="clear"></div>
+        </div>
+		<div class="form-group">
+          <label class="form_label">Alternate Mobile No</label>
+          <div class="custom-input">
+            <input type="number" id="update_mobile2_byse" placeholder="Alternate Mobile No" class="form-input" data-role="none"  maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+          </div>
+          <div class="clear"></div>
+        </div>
+		<!-- <div class="form-group">
+          <label class="form_label">Email ID</label>
+          <div class="custom-input">
+            <input type="email" id="update_email_byse" placeholder="Email ID" class="form-input" data-role="none" onblur="javascript:validate_Email('update_email_byse');" />
+          </div>
+          <div class="clear"></div>
+        </div> -->
+		<div class="form-group">
+          <label class="form_label">Address</label>
+          <div class="custom-input">
+            <textarea id="update_address_byse" placeholder="Address" class="form-input" data-role="none" ></textarea>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+		<div class="form-group">
+          <label class="form_label">Date of Birth</label>
+          <div class="custom-input">
+            <input type="date" id="update_dob_byse" class="form-input" data-role="none" maxlength="10" min='1899-01-01' />
+          </div>
+          <div class="clear"></div>
+        </div>
+
+		<label class="form_label">Gender<span style="color: red;">*</span></label>
+		<div class="d-flex">
+			<div class="padding0_10px">
+				<label class="mb-0 custom_check">
+				<input type="radio" name="update_gender_byse" id="update_gender_byse_male" data-role="none" value="Male" data-cacheval="false" checked/> <span class="custom_radio"></span>Male</label>
+			</div>
+			<div class="padding0_10px">
+				<label class="mb-0 custom_check">
+				<input type="radio" name="update_gender_byse" id="update_gender_byse_female" data-role="none" value="Female" data-cacheval="false" /> <span class="custom_radio"></span>Female</label>
+			</div>	
+		</div><br>
+
+		<div class="form-group">
+          <label class="form_label">Aadhar Card No<span style="color: red;">*</span></label>
+          <div class="custom-input">
+            <input type="number" id="update_aadharno_byse" placeholder="Aadhar Card No" class="form-input" data-role="none" maxlength="12" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onblur="javascript:checkaadhar('update_aadharno_byse');" style="text-transform:uppercase" />
+          </div>
+          <div class="clear"></div>
+        </div>
+
+		<!--<div class="form-group">
+			  <label class="form_label">Aadhar Photo</label>
+			  <div class="additional_input_photo_2"> 
+					<img id="aadhar_photo_byse" src="assets/images/camera_icon.png" alt="photo" style="margin-top:5px;width:20px;height:20px;" class="ui-li-icon ui-corner-none profile_img" onclick="javascript:capturePhoto_aadhar_byse();" onerror="this.src='assets/images/camera_icon.png';"/> 
+			   </div>
+			   <div class="billprogress additional_form_none" style="display: none;" id="aadhar_photo_byse_status_div">
+					<progress max="100" value="0" id="aadhar_photo_byse_status" data-label="0%"></progress>
+			   </div>
+			   <div class="clear"></div>
+		 </div>-->
+
+		<div id="kyc_div">
+			<div class="kyc_header">Document</div>
+			<div class="form-group">
+				 <div class="select_role_block">
+						<select name="update_kyc_type_byse" id="update_kyc_type_byse" data-role="none">
+							  <option value="pancard" selected="selected">Pan Card</option>
+							  <option value="drivinglicense">Driving License</option>
+						</select>
+				</div>
+			</div>
+
+			<div id="update_kyc_type_doc">
+			<div class="form-group">
+			  <label class="form_label">Document Photo</label>
+			  <div class="additional_input_photo_2"> 
+					<img id="kycdoc_photo_byse" src="assets/images/camera_icon.png" alt="photo" style="margin-top:5px;width:20px;height:20px;" class="ui-li-icon ui-corner-none profile_img" onclick="javascript:capturePhoto_kycdoc_byse();" onerror="this.src='assets/images/camera_icon.png';"/> 
+			   </div>
+			   <div class="billprogress additional_form_none" style="display: none;" id="kycdoc_photo_status_div_byse">
+					<progress max="100" value="0" id="kycdoc_photo_status_byse" data-label="0%"></progress>
+			   </div>
+			   <div class="clear"></div>
+		    </div>
+            </div>
+		</div>
+
+		<div class="ui-grid-solo form-group">
+		<label class="form_label">State<span style="color: red;">*</span></label>
+		<div class="ui-block-a">
+		   <div >
+			<select name="update_state_list_byse" id="update_state_list_byse" data-role="none" onchange="javascript:fetchDistrictlist_byse();" class="form-control">
+			</select>
+			  </div>
+		  </div>
+		</div>
+
+		<div class="ui-grid-solo form-group">
+		<label class="form_label">District<span style="color: red;">*</span></label>
+		<div class="ui-block-a">
+		   <div >
+			<select name="update_district_byse" id="update_district_byse" data-role="none" onchange="javascript:fetchCitylist_byse();" class="form-control">
+			</select>
+			  </div>
+		  </div>
+		</div>
+
+		<div class="ui-grid-solo form-group">
+		<label class="form_label">City<span style="color: red;">*</span></label>
+		<div class="ui-block-a">
+		   <div >
+			<select name="update_city_byse" id="update_city_byse" data-role="none" onchange="javascript:fetchDealerlist_byse();" class="form-control">
+			</select>
+			  </div>
+		  </div>
+		</div>
+
+		<input type="hidden" id="update_source_byse" />
+		<input type="hidden" id="update_point_claim_byse" />
+		<input type="hidden" id="update_photo_byse" />
+
+		<div class="form-group">
+		     <label class="form_label">Dealer<span style="color: red;">*</span></label>
+		     <div class="select_role_block_1">
+					<select name="update_dealer_list_byse" id="update_dealer_list_byse" data-role="none" class="form-control">
+					</select>
+			</div>
+		</div>
+
+		<input type="hidden" id="update_latitude_byse" />
+		<input type="hidden" id="update_longitude_byse" />
+
+        <div class="form-group1 mt-20 mb-100"> <a href="javascript:updateProfile_byse();" class="btn btn_primary">Submit</a>
+          <div class="clear"></div>
+        </div>
+      </div>
+  </div>
+  <footer>
+		<div class="d-flex align-items-center justify-content-center flex-wrap">
+			<div class="foot_menu">
+				<ul>
+					<a href="#homepage"><li><div class="fthumb-icon"><img src="assets/images/app_images/home.png"></div>Home<br><br></li></a>
+					<!-- <a href="javascript:getPending_sites_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran.png"></div>Approve Site</li></a>
+					<a href="javascript:getPending_txns_byse();"><li><div class="fthumb-icon"><img src="assets/images/app_images/add-tran2.png"></div>Approve Transactions</li></a> -->
+					<a href="#contact"><li><div class="fthumb-icon"><img src="assets/images/app_images/contect.png"></div>Connect<br><br></li></a>
+				</ul>
+			</div>
+		</div> 
+	</footer>
+</div>
+	
+<div data-role="popup" id="optionspop_profile_doc_kyc" data-theme="a" data-transition="pop" data-overlay-theme="b">
+	<div class="floors">
+	  <div class="flr2" id="tap_options2">
+		   <ul>
+				 <li><a href="javascript:uploadPhoto_doc_cam();">From Camera</a></li>
+				 <li><a href="javascript:uploadPhoto_doc();">From Gallery</a></li>
+		   </ul>
+	  </div>
+	</div>
+  </div>
+  <div id="loading"></div>
+<div id="wait" style="display:none;width:69px;height:89px;border:0px solid black;position:absolute;top:50%;left:40%;padding:2px;"><img src="assets/img/load.gif" width="60" height="60" /></div>
+<script src="assets/js/mloyal.js"></script>
+<script src="assets/js/jquery.mousewheel.min.js"></script>
+
+<script>
+	jQuery("#icon-slider").owlCarousel({
+  autoplay: true,
+  rewind: true, /* use rewind if you don't want loop */
+  margin: 10,
+   /*
+  animateOut: 'fadeOut',
+  animateIn: 'fadeIn',
+  */
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 7000,
+  smartSpeed: 500,
+  nav: false,
+  dots:false,
+  responsive: {
+    0: {
+      items: 4
+    },
+
+    600: {
+      items: 4
+    },
+
+    1024: {
+      items: 4
+    },
+
+    1366: {
+      items: 4
+    }
+  }
+});
+</script>
+
+<script>
+	jQuery("#numberslider").owlCarousel({
+  autoplay: true,
+  rewind: true, /* use rewind if you don't want loop */
+  margin: 10,
+   /*
+  animateOut: 'fadeOut',
+  animateIn: 'fadeIn',
+  */
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 7000,
+  smartSpeed: 500,
+  nav: false,
+  dots:false,
+  responsive: {
+    0: {
+      items: 4
+    },
+
+    600: {
+      items: 4
+    },
+
+    1024: {
+      items: 4
+    },
+
+    1366: {
+      items: 4
+    }
+  }
+});
+</script>
+<script>
+	jQuery("#uspslider").owlCarousel({
+	autoplay: true,
+	rewind: true, /* use rewind if you don't want loop */
+	margin: 10,
+	/*
+	animateOut: 'fadeOut',
+	animateIn: 'fadeIn',
+	*/
+	responsiveClass: true,
+	autoHeight: true,
+	autoplay: true,
+	smartSpeed: 500,
+	nav: false,
+	dots:false,
+	responsive: {
+	0: {
+	  items: 3.5
+	},
+
+	600: {
+	  items: 3.5
+	},
+
+	1024: {
+	  items: 3
+	},
+
+	1366: {
+	  items: 3
+	}
+	}
+	});
+</script>
+<script>
+	jQuery("#socialslider").owlCarousel({
+	autoplay: true,
+	rewind: true, /* use rewind if you don't want loop */
+	margin: 10,
+	/*
+	animateOut: 'fadeOut',
+	animateIn: 'fadeIn',
+	*/
+	responsiveClass: true,
+	autoHeight: true,
+	autoplay: true,
+	smartSpeed: 500,
+	nav: false,
+	dots:false,
+	responsive: {
+	0: {
+	  items: 2.5
+	},
+
+	600: {
+	  items: 2.5
+	},
+
+	1024: {
+	  items: 3
+	},
+
+	1366: {
+	  items: 3
+	}
+	}
+	});
+</script>
+<script>
+	jQuery("#ProductCat").owlCarousel({
+	autoplay: true,
+	rewind: true, /* use rewind if you don't want loop */
+	margin: 10,
+	/*
+	animateOut: 'fadeOut',
+	animateIn: 'fadeIn',
+	*/
+	responsiveClass: true,
+	autoHeight: true,
+	autoplay: true,
+	smartSpeed: 500,
+	nav: false,
+	dots:true,
+	responsive: {
+	0: {
+	  items: 2.5
+	},
+
+	600: {
+	  items: 2.5
+	},
+
+	1024: {
+	  items: 3
+	},
+
+	1366: {
+	  items: 3
+	}
+	}
+	});
+	
+</script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+
+<script src="./src/js/jquery.swichTab.js" charset="utf-8"></script>
+
+<script>
+
+	$("#toggleFilter1").on("click", function() {
+			$(".overlay").fadeIn("fast");
+			$("#filter_panel1").slideDown("fast");
+		});
+		$("#filterClose1").on("click", function() {
+			$("#filter_panel1").slideUp("fast");
+			$(".overlay").fadeOut("fast");
+		});
+		$(".overlay").on("click", function() {
+			$("#filter_panel1").slideUp("fast");
+			$(".overlay").fadeOut("fast");
+		});
+		$("#toggleFilter21").on("click", function() {
+			$(".overlay").fadeIn("fast");
+			$("#filter_panel21").slideDown("fast");
+		});
+		$("#filterClose2, .filter_close1").on("click", function() {
+			$("#filter_panel21").slideUp("fast");
+			$(".overlay").fadeOut("fast");
+		});
+		$(".overlay").on("click", function() {
+			$("#filter_panel21").slideUp("fast");
+			$(".overlay").fadeOut("fast");
+		});
+		 
+		$("#toggleFilter2").on("click", function() {
+				$(".overlay").fadeIn("fast");
+				$("#filter_panel2").slideDown("fast");
+			})
+			$("#filterClose2").on("click", function() {
+				$("#filter_panel2").slideUp("fast");
+				$(".overlay").fadeOut("fast");
+			})
+			$(".overlay").on("click", function() {
+				$("#filter_panel2").slideUp("fast");
+				$(".overlay").fadeOut("fast");
+			})
+		$('input[type=radio][name=input_email_statement]').change(function() {
+				if(this.value == 'selectduration') {
+					$("#dateduration").show();
+				} else {
+					$("#dateduration").hide();
+				}
+			});
+	
+			$("#ptsEarn").on("click", function() {
+				$(".overlay").fadeIn("fast");
+				$("#filter_panel3").slideDown("fast");
+				$(".redeem-pts").hide();
+				$(".earn-pts").show();
+			});
+			$("#ptsRedeem").on("click", function() {
+				$(".overlay").fadeIn("fast");
+				$("#filter_panel3").slideDown("fast");
+				$(".redeem-pts").show();
+				$(".earn-pts").hide();
+			});
+			$(".filter-option").hide();
+			$("#filter-tran").on('click', function(){
+				$(".filter-option").show();
+			});
+
+			$("#earn").on('click', function(){
+				$(".earn-pts").show();
+				$(".filter-option").hide();
+				$(".redeem-pts").hide();
+				$("input:radio[id=earn]:checked")[0].checked = false;
+				$("input:radio[id=redeem]:checked")[0].checked = false;
+
+			});
+			$("#redeem").on('click', function(){
+				$(".earn-pts").hide();
+				$(".filter-option").hide();
+				$(".redeem-pts").show();
+				$("input:radio[id=redeem]:checked")[0].checked = false;
+				$("input:radio[id=earn]:checked")[0].checked = false;
+
+			});
+
+			$(".overlay").on("click", function() {
+				$("#filter_panel3").slideUp("fast");
+				$(".overlay").fadeOut("fast");
+			})
+	
+
+</script>
+<script>
+	$("#j-500").hide();
+	$("#j-1500").hide();
+	$("#j-2500").hide();
+	$("#j-3500").hide();
+	$("#j-4500").hide();
+	$("#j-5500").hide();
+	$("#j-6500").hide();
+	$("#j-7500").hide();
+	$("#j-8500").hide();
+
+	$("#j-btn-500").on('click', function(){
+	$("#j-500").show();
+	$("#j-1500").hide();
+	$("#j-2500").hide();
+	$("#j-3500").hide();
+	$("#j-4500").hide();
+	$("#j-5500").hide();
+	$("#j-6500").hide();
+	$("#j-7500").hide();
+	$("#j-8500").hide();
+});
+
+$("#j-btn-1500").on('click', function(){
+	$("#j-500").hide();
+	$("#j-1500").show();
+	$("#j-2500").hide();
+	$("#j-3500").hide();
+	$("#j-4500").hide();
+	$("#j-5500").hide();
+	$("#j-6500").hide();
+	$("#j-7500").hide();
+	$("#j-8500").hide();
+});
+
+$("#j-btn-2500").on('click', function(){
+	$("#j-500").hide();
+	$("#j-1500").hide();
+	$("#j-2500").show();
+	$("#j-3500").hide();
+	$("#j-4500").hide();
+	$("#j-5500").hide();
+	$("#j-6500").hide();
+	$("#j-7500").hide();
+	$("#j-8500").hide();
+});
+
+$("#j-btn-3500").on('click', function(){
+	$("#j-500").hide();
+	$("#j-1500").hide();
+	$("#j-2500").hide();
+	$("#j-3500").show();
+	$("#j-4500").hide();
+	$("#j-5500").hide();
+	$("#j-6500").hide();
+	$("#j-7500").hide();
+	$("#j-8500").hide();
+});
+
+$("#j-btn-4500").on('click', function(){
+	$("#j-500").hide();
+	$("#j-1500").hide();
+	$("#j-2500").hide();
+	$("#j-3500").hide();
+	$("#j-4500").show();
+	$("#j-5500").hide();
+	$("#j-6500").hide();
+	$("#j-7500").hide();
+	$("#j-8500").hide();
+});
+
+$("#j-btn-5500").on('click', function(){
+	$("#j-500").hide();
+	$("#j-1500").hide();
+	$("#j-2500").hide();
+	$("#j-3500").hide();
+	$("#j-4500").hide();
+	$("#j-5500").show();
+	$("#j-6500").hide();
+	$("#j-7500").hide();
+	$("#j-8500").hide();
+});
+
+$("#j-btn-6500").on('click', function(){
+	$("#j-500").hide();
+	$("#j-1500").hide();
+	$("#j-2500").hide();
+	$("#j-3500").hide();
+	$("#j-4500").hide();
+	$("#j-5500").hide();
+	$("#j-6500").show();
+	$("#j-7500").hide();
+	$("#j-8500").hide();
+});
+
+$("#j-btn-7500").on('click', function(){
+	$("#j-500").hide();
+	$("#j-1500").hide();
+	$("#j-2500").hide();
+	$("#j-3500").hide();
+	$("#j-4500").hide();
+	$("#j-5500").hide();
+	$("#j-6500").hide();
+	$("#j-7500").show();
+	$("#j-8500").hide();
+});
+
+$("#j-btn-8500").on('click', function(){
+	$("#j-500").hide();
+	$("#j-1500").hide();
+	$("#j-2500").hide();
+	$("#j-3500").hide();
+	$("#j-4500").hide();
+	$("#j-5500").hide();
+	$("#j-6500").hide();
+	$("#j-7500").hide();
+	$("#j-8500").show();
+});
+
+$(".fa-times").on('click', function(){
+	$("#j-500").hide();
+	$("#j-1500").hide();
+	$("#j-2500").hide();
+	$("#j-3500").hide();
+	$("#j-4500").hide();
+	$("#j-5500").hide();
+	$("#j-6500").hide();
+	$("#j-7500").hide();
+	$("#j-8500").hide();
+});
+
+	
+</script>
+
+<script>
+	
+$("#learning-reward").hide();
+$("#family").hide();
+
+$("#my-reward-btn").on('click', function(){
+$("#my-reward").show();
+$("#Learning-reward-btn").removeClass("reward-btn-active");
+$("#Family-reward-btn").removeClass("reward-btn-active");
+$(this).addClass("reward-btn-active");
+$("#learning-reward").hide();
+$("#family").hide();
+
+});
+
+$("#Learning-reward-btn").on('click', function(){
+$("#learning-reward").show();
+$("#my-reward").hide();
+$("#family").hide();
+$("#my-reward-btn").removeClass("reward-btn-active");
+$("#Family-reward-btn").removeClass("reward-btn-active");
+$(this).addClass("reward-btn-active");
+
+});
+
+$("#Family-reward-btn").on('click', function(){
+$("#family").show();
+$("#my-reward").hide();
+$("#learning-reward").hide();
+$("#my-reward-btn").removeClass("reward-btn-active");
+$("#Learning-reward-btn").removeClass("reward-btn-active");
+$(this).addClass("reward-btn-active");
+
+});
+
+</script>
+
+<script>
+	$("#completed").hide();
+	
+	$("#ongoing-site").on('click', function(){
+	$("#ongoing").show();
+	$("#completed").hide();
+	$("#completed-site").removeClass("reward-btn-active");
+	$(this).addClass("reward-btn-active");
+	});
+	
+	$("#completed-site").on('click', function(){
+	$("#ongoing").hide();
+	$("#completed").show();
+	$("#ongoing-site").removeClass("reward-btn-active");
+	$(this).addClass("reward-btn-active");
+	});
+	
+	
+	</script>
+
+	<script>
+document.getElementById("myinputrange").oninput = function() {
+  var value = (this.value-this.min)/(this.max-this.min)*100
+  this.style.background = 'linear-gradient(to right, #ed1f24 0%, #ed1f24 ' + value + '%, #f7a4a6 ' + value + '%, #f7a4a6 100%)'
+};
+
+
+
+	</script>
+
+	<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en',includedLanguages: 'en,hi,bn,pa,ta,mr,te,gu,kn,ml', autoDisplay: false, layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+	
+</body>
+</html>
